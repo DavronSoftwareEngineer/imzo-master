@@ -1,0 +1,380 @@
+{
+  "common": {
+    "siteName": "ImzoMaster",
+    "tagline": "Toshkentda plastik va alyumin oyna va eshiklar ishlab chiqarish va o'rnatish",
+    "phone": "+998 95 388 80 80",
+    "phoneRaw": "+998953888080",
+    "email": "info@imzo-evolution.uz",
+    "address": "Toshkent sh., Yunusobod tumani",
+    "shortAddress": "Toshkent, Yunusobod"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "products": "Mahsulotlar",
+    "plasticWindows": "Plastik oynalar",
+    "aluminumWindows": "Alyumin oynalar",
+    "forCafes": "Kafe va restoranlar uchun",
+    "about": "Biz haqimizda",
+    "contact": "Kontaktlar",
+    "privacy": "Maxfiylik siyosati"
+  },
+  "home": {
+    "heroTitle": "Toshkentda ishlab chiqaruvchidan zamonaviy oyna va eshiklar",
+    "heroSubtitle": "ImzoMaster — Imzo zavodining rasmiy dileri. Avtomatlashtirilgan ishlab chiqarish, Yevropa sifati, qulay narxlar. O'zbekiston bozorida 10+ yil.",
+    "heroCta1": "Mahsulotlarimiz",
+    "heroCta2": "Bepul konsultatsiya",
+    "statYears": "10+ yil",
+    "statYearsLabel": "Bozorda",
+    "statUnits": "2 500",
+    "statUnitsLabel": "Smenada mahsulot",
+    "statModels": "12+",
+    "statModelsLabel": "Oyna modeli",
+    "statAuto": "100%",
+    "statAutoLabel": "Avtomatlashtirish",
+    "whyUsTitle": "Nega bizni tanlashadi",
+    "whyUsSubtitle": "Biz sifatli oynalarni hamma uchun qulay narxda taqdim etamiz",
+    "adv1Title": "Rasmiy kafolat",
+    "adv1Desc": "Imzo zavodidan to'g'ridan-to'g'ri kafolat",
+    "adv2Title": "Qulay narxlar",
+    "adv2Desc": "Vositachilarsiz, moslashuvchan chegirma tizimi",
+    "adv3Title": "Kalit topshirish o'rnatish",
+    "adv3Desc": "O'lchov, yetkazib berish va professional montaj",
+    "productsTitle": "Mahsulotlarimiz",
+    "productsSubtitle": "Uy va biznes uchun keng assortimentdagi oyna va eshik tizimlari",
+    "factoryTitle": "Avtomatlashtirilgan ishlab chiqarish",
+    "factorySubtitle": "Imzo zavodi kompyuter boshqaruvli zamonaviy uskunalar bilan jihozlangan",
+    "factoryFacts": [
+      "To'liq avtomatlashtirilgan konveyer liniyasi",
+      "Barcha bosqichlarda kompyuter nazorati: kesish, payvandlash, yig'ish",
+      "Bir smenada 2 500 tagacha tayyor mahsulot",
+      "Har bir mahsulotning aniqligi va yuqori sifati kafolati",
+      "Sertifikatlangan materiallar va butlovchi qismlar"
+    ],
+    "factoryUnits": "bir smenada tayyor mahsulot",
+    "factoryDesc": "Konveyer ishlab chiqarish tizimi",
+    "howWeWorkTitle": "Qanday ishlaymiz",
+    "howWeWorkSubtitle": "Mukammal oynalarga 4 oddiy qadam",
+    "howWeWork": [
+      { "title": "Konsultatsiya va o'lchov", "desc": "Mutaxassisning bepul tashrifi, professional o'lchov va optimal yechimni tanlash" },
+      { "title": "Ishlab chiqarish", "desc": "Kompyuter sifat nazorati ostida avtomatlashtirilgan liniyada ishlab chiqarish" },
+      { "title": "Yetkazib berish", "desc": "Tayyor mahsulotlarni ob'ektingizga ehtiyotkorlik bilan transportirovka qilish" },
+      { "title": "Montaj", "desc": "Malakali brigada tomonidan professional kalit topshirish o'rnatish" }
+    ]
+  },
+  "products": {
+    "title": "ImzoMaster mahsulotlari",
+    "subtitle": "Plastik va alyumin oynalar, shuningdek, kafe va restoranlar uchun maxsus tizimlar",
+    "models": "Modellar",
+    "details": "Barcha modellarni ko'rish",
+    "categories": {
+      "pvc": {
+        "title": "Plastik oynalar (PVX)",
+        "subtitle": "Energiyani tejovchi va uzoq muddatli",
+        "description": "Yuqori sifat, issiqlik va ovoz izolyatsiyasi. Ekonomdan premiumgacha 4 ta model.",
+        "models": "Trio 60, Quattro 60, Engelberg 70, Engelberg 80"
+      },
+      "aluminum": {
+        "title": "Alyumin oynalar",
+        "subtitle": "Mustahkamlik, uslub, energiya samaradorligi",
+        "description": "Panoram oynalash, fasadlar va zamonaviy interyerlar uchun.",
+        "models": "Thermo 57, Thermo 65, Thermo 78, Thermo 98"
+      },
+      "cafe": {
+        "title": "Kafe va restoranlar uchun",
+        "subtitle": "Biznes uchun maxsus tizimlar",
+        "description": "Gilyotinalar, pergolalar, surilma portallar va sovuq oynalash.",
+        "models": "Gilyotina, Pergola, Chempion, BKH 65"
+      }
+    }
+  },
+  "plasticWindows": {
+    "title": "Plastik oynalar (PVX)",
+    "subtitle": "Energiyani tejovchi va uzoq muddatli PVX oynalar",
+    "description": "IMZO plastik oynalari — bu sifat, qulaylik va chidamlilik uyg'unligi. Ular yilning istalgan vaqtida issiqlik, tinchlik va shinamlikni ta'minlaydi, isitish xarajatlarini kamaytirishga yordam beradi. Namlik, quyosh va harorat o'zgarishiga chidamli, bo'yash va murakkab parvarish talab qilmaydi. Kvartiralar, shahar tashqarisidagi uylar, ofislar, bolalar bog'chalari va maktablar uchun ideal.",
+    "specs": "Xususiyatlari",
+    "models": {
+      "trio60": {
+        "name": "Trio 60",
+        "tagline": "Iqtisodiy yechim",
+        "description": "Standart oyna konstruksiyalari uchun uch kamerali profil.",
+        "specs": {
+          "type": "Profil turi",
+          "chambers": "Kameralar soni",
+          "wallThickness": "Devor qalinligi",
+          "mountDepth": "O'rnatish chuqurligi",
+          "mountPlane": "O'rnatish tekisligi",
+          "maxSashHeight": "Maks. tavak balandligi",
+          "maxSashWidth": "Maks. tavak kengligi",
+          "glassThickness": "Shisha paket qalinligi",
+          "profileSeries": "Profil seriyasi",
+          "maxSashWeight": "Maks. tavak og'irligi"
+        },
+        "features": [
+          "Qulay narx",
+          "Yaxshi issiqlik izolyatsiyasi",
+          "Kvartira va ofislar uchun mos",
+          "Parvarish oson"
+        ]
+      },
+      "quattro60": {
+        "name": "Quattro 60",
+        "tagline": "Yaxshilangan issiqlik izolyatsiyasi",
+        "description": "Qo'shimcha issiqlik va ovoz izolyatsiyali to'rt kamerali profil.",
+        "features": [
+          "Yaxshilangan ovoz izolyatsiyasi",
+          "Energiya samaradorligi",
+          "Shakl va ranglar xilma-xilligi",
+          "Chidamlilik"
+        ]
+      },
+      "engelberg70": {
+        "name": "Engelberg 70",
+        "tagline": "Premium issiqlik izolyatsiyasi",
+        "description": "Maksimal qulaylik uchun 70 mm o'rnatish chuqurligidagi besh kamerali profil.",
+        "features": [
+          "Katta tavak o'lchamlari",
+          "Qalin shisha paket",
+          "Premium issiqlik izolyatsiyasi",
+          "Zamonaviy dizayn"
+        ]
+      },
+      "engelberg80": {
+        "name": "Engelberg 80",
+        "tagline": "Maksimal ishonchlilik",
+        "description": "Maksimal mustahkamlik va izolyatsiyali «Issiq» seriyali olti kamerali profil.",
+        "features": [
+          "Maksimal issiqlik izolyatsiyasi",
+          "Kuchaytirilgan konstruksiya",
+          "50 mm gacha shisha paket",
+          "Og'ir tavaklarga bardoshli",
+          "Premium seriya"
+        ]
+      }
+    }
+  },
+  "aluminumWindows": {
+    "title": "Alyumin oynalar",
+    "subtitle": "Mustahkamlik, uslub va energiya samaradorligi",
+    "description": "IMZO alyumin oynalari mustahkamlik, uslub va energiya samaradorligini birlashtiradi. Ular yirik inshootlar va zamonaviy interyerlarda ishonchlilik, nafislik va ob-havoga chidamliligi uchun qadrlanadi. Katta yuklamalarga bardosh beradi, panoram oynalash yaratish imkonini beradi va tashqi ko'rinishini yo'qotmagan holda o'nlab yillar xizmat qiladi.",
+    "specs": "Xususiyatlari",
+    "models": {
+      "thermo57": {
+        "name": "Thermo 57",
+        "tagline": "Ixcham issiqlik izolyatsiyasi",
+        "description": "Asosiy issiqlik izolyatsiyasi uchun 17 mm termo-ko'prikli alyumin profil.",
+        "specs": {
+          "type": "Profil turi",
+          "profileSeries": "Profil seriyasi",
+          "frameDepthWindow": "Oyna ramasi chuqurligi",
+          "frameDepthDoor": "Eshik ramasi chuqurligi",
+          "sashDepth": "Tavak chuqurligi",
+          "glassThickness": "Shisha paket qalinligi",
+          "thermalBreak": "Termo-ko'prik kengligi",
+          "coating": "Qoplama",
+          "chambers": "Kameralar soni",
+          "wallThickness": "Profil devori qalinligi",
+          "mountDepth": "O'rnatish chuqurligi",
+          "maxSashHeight": "Maks. tavak balandligi",
+          "maxSashWidth": "Maks. tavak kengligi"
+        },
+        "features": [
+          "Ixcham o'lchamlar",
+          "Oyna va eshiklar uchun mos",
+          "Turli qoplama variantlari",
+          "Qulay narx"
+        ]
+      },
+      "thermo65": {
+        "name": "Thermo 65",
+        "tagline": "Optimal muvozanat",
+        "description": "65 mm chuqurlikdagi va katta tavakli uch kamerali alyumin profil.",
+        "features": [
+          "Katta tavak o'lchamlari",
+          "Uch kamerali konstruksiya",
+          "Keng shisha paket diapazoni",
+          "RAL ranglar palitrasi"
+        ]
+      },
+      "thermo78": {
+        "name": "Thermo 78",
+        "tagline": "Katta teshiklar uchun",
+        "description": "Yuqori oyna konstruksiyalari uchun kuchaytirilgan alyumin profil.",
+        "features": [
+          "Yuqori teshiklar uchun",
+          "1.9 mm gacha kuchaytirilgan devor",
+          "Maksimal balandlik 2600 mm",
+          "Premium qoplama"
+        ]
+      },
+      "thermo98": {
+        "name": "Thermo 98",
+        "tagline": "Flagman issiqlik izolyatsiyasi",
+        "description": "54 mm termo-ko'prikli va 98 mm chuqurlikdagi eng kuchli alyumin profil.",
+        "features": [
+          "Maksimal issiqlik izolyatsiyasi",
+          "54 mm termo-ko'prik",
+          "Premium konstruksiya",
+          "Passiv uylar uchun"
+        ]
+      }
+    }
+  },
+  "cafe": {
+    "title": "Kafe va restoranlar uchun yechimlar",
+    "subtitle": "Tijorat binolari uchun maxsus oyna va eshik tizimlari",
+    "description": "IMZO kafe, restoran va do'konlar uchun turli xil oyna va eshik tizimlarini taklif etadi. Zamonaviy uslub yarating, qulaylikni saqlang va biznesingizni ajralib turishiga yordam bering. Panoram oynalar, interyer to'siqlari, ishonchli eshiklar va energiya tejovchi yechimlar.",
+    "features": "Xususiyatlari",
+    "systems": {
+      "guillotine": {
+        "name": "Gilyotin tizimi",
+        "description": "Turar joy va tijorat obyektlarini panoram oynalash uchun vertikal ko'tarish tizimli innovatsion oynalar. Pult yoki smartfon orqali boshqariladi.",
+        "features": [
+          "Vertikal ko'tarish",
+          "Panoram oynalash",
+          "Pultdan boshqarish",
+          "Smartfondan boshqarish",
+          "Turar joy va tijorat obyektlari uchun"
+        ]
+      },
+      "tentPergola": {
+        "name": "Tent pergola",
+        "description": "Ochiq terrasalar, kafe va restoranlar uchun universal yechim. Pult yoki smartfondan boshqariladigan surilma tizim.",
+        "features": [
+          "Surilma konstruksiya",
+          "Pultdan boshqarish",
+          "Smartfondan boshqarish",
+          "Ochiq terrasalar uchun",
+          "Kafe va restoranlar uchun ideal"
+        ]
+      },
+      "chempion": {
+        "name": "Chempion",
+        "description": "Balkon va lodjiyalarni sovuq oynalash uchun alyumin tizim. Issiqlik izolyatsiyasiga yuqori talablar bo'lmagan binolarda eng ko'p qo'llaniladi.",
+        "features": [
+          "Sovuq oynalash",
+          "Balkon va lodjiyalar uchun",
+          "Alyumin profil",
+          "Yengil konstruksiya",
+          "Iqtisodiy yechim"
+        ]
+      },
+      "bioclimatic": {
+        "name": "Bioklimatik pergola",
+        "description": "Quyoshdan himoya qilish bozoridagi innovatsion, yuqori texnologiyali va eng zamonaviy model. Aylanadigan lamellar mikroiqlimni sozlash va terrasada ideal sharoitlar yaratish imkonini beradi.",
+        "features": [
+          "Aylanadigan lamellar",
+          "Mikroiqlimni sozlash",
+          "Quyosh va yomg'irdan himoya",
+          "Zamonaviy dizayn",
+          "Yuqori texnologiyali yechim"
+        ]
+      },
+      "bkh65": {
+        "name": "Surilma tizim BKH 65",
+        "description": "Katta o'lchamli teshiklar uchun ko'tarib-suriladigan tizimlar (HS-Portal). Standart eshiklar o'rnini bosuvchi original interyer yechimi. Ochiq holatda ko'cha va uy o'rtasidagi chegarani yo'qotadi, maksimal yorug'lik va havo o'tkazadi.",
+        "features": [
+          "Ko'tarib-suriladigan mexanizm",
+          "Katta teshiklar uchun",
+          "HS-Portal tizimi",
+          "Maksimal yorug'lik",
+          "Ko'cha-uy chegarasini yo'qotadi"
+        ]
+      }
+    }
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "subtitle": "Imzo zavodining rasmiy dileri — O'zbekistondagi yetakchi oyna va eshik tizimlari ishlab chiqaruvchilardan biri",
+    "aboutTitle": "ImzoMaster kompaniyasi haqida",
+    "description": "Imzo 10 yildan ortiq vaqtdan beri O'zbekiston PVX mahsulotlari bozorida yetakchi mavqega ega. Brend mahsulotlari ishonchliligi va chidamliligi bilan mashhur bo'lib, minglab mamnun mijozlar tomonidan tasdiqlangan.",
+    "contactUs": "Biz bilan bog'laning",
+    "listTitle": "ImzoMaster — bu:",
+    "list": [
+      "Imzo zavodining rasmiy dileri",
+      "O'zbekiston bozorida 10+ yil",
+      "Minglab mamnun mijozlar",
+      "Ishlab chiqaruvchidan to'g'ridan-to'g'ri kafolat",
+      "Kalit topshirish xizmatlar to'liq sikli"
+    ],
+    "factoryTitle": "Avtomatlashtirilgan ishlab chiqarish",
+    "factoryDesc": "Imzo fabrikasi ishlab chiqarishi to'liq avtomatlashtirilgan va maxsus dasturiy ta'minotli kompyuter tizimi tomonidan boshqariladi. Zavod konveyer tizimida ishlaydi — tayyorlashning barcha bosqichlari (kesish, payvandlash, yig'ish) kompyuter tomonidan nazorat qilinadi, bu aniqlik, samaradorlik va yuqori unumdorlikni kafolatlaydi.",
+    "factoryFeatures": [
+      "To'liq avtomatlashtirilgan liniya",
+      "Barcha bosqichlarda kompyuter nazorati",
+      "Konveyer ishlab chiqarish tizimi",
+      "Yuqori aniqlikdagi kesish va payvandlash",
+      "Har bir mahsulot sifat nazorati"
+    ],
+    "factoryUnits": "smenada tayyor mahsulot",
+    "factory100": "100% avtomatlashtirish",
+    "advantagesTitle": "Bizning afzalliklarimiz",
+    "advantagesSubtitle": "Nega mijozlar ImzoMaster ni tanlashadi",
+    "advantages": [
+      { "title": "Rasmiy kafolat", "description": "Barcha mahsulotlarga Imzo zavodidan to'g'ridan-to'g'ri kafolat" },
+      { "title": "Qulay narxlar", "description": "Vositachilarsiz ishlaymiz, moslashuvchan chegirma va aksiyalar tizimi" },
+      { "title": "Bepul o'lchov", "description": "Professional o'lchovchi bepul keladi va joyida maslahat beradi" },
+      { "title": "Yetkazish va o'rnatish", "description": "Kalit topshirish to'liq sikl — o'lchovdan tortib malakali brigada montajigacha" },
+      { "title": "Keng assortiment", "description": "Kvartiralar, ofislar va xususiy uylar uchun ko'plab o'lcham, shakl va ranglar" },
+      { "title": "Energiya samaradorligi", "description": "Ajoyib issiqlik va ovoz izolyatsiyasi, isitish va konditsionerlash xarajatlarini kamaytirish" }
+    ]
+  },
+  "contact": {
+    "title": "Kontaktlar",
+    "subtitle": "Bepul konsultatsiya va o'lchov uchun biz bilan bog'laning",
+    "heading": "Biz bilan bog'laning",
+    "intro": "So'rov qoldiring yoki to'g'ridan-to'g'ri qo'ng'iroq qiling. Mutaxassislarimiz optimal yechimni tanlashda yordam beradi va barcha savollarga javob beradi.",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Manzil",
+    "workHours": "Ish vaqti",
+    "workHoursValue": "Dush–Shan: 9:00 – 18:00",
+    "formTitle": "So'rov qoldiring",
+    "formName": "Ismingiz",
+    "formNamePlaceholder": "Ismingizni kiriting",
+    "formPhone": "Telefon raqam",
+    "formPhonePlaceholder": "+998 XX XXX XX XX",
+    "formEmail": "Email (ixtiyoriy)",
+    "formEmailPlaceholder": "example@mail.ru",
+    "formSubmit": "So'rov yuborish",
+    "formSuccess": "So'rovingiz uchun rahmat!",
+    "formSuccessDesc": "Biz siz bilan tez orada bog'lanamiz."
+  },
+  "cta": {
+    "title": "Loyihangizni muhokama qilishga tayyormisiz?",
+    "subtitle": "Bepul konsultatsiya va o'lchov uchun biz bilan bog'laning",
+    "call": "Bizga yozish"
+  },
+  "footer": {
+    "description": "Toshkentda plastik va alyumin oyna va eshiklar ishlab chiqarish va o'rnatish. Avtomatlashtirilgan ishlab chiqarish, sifat kafolati.",
+    "nav": "Navigatsiya",
+    "contacts": "Kontaktlar",
+    "copyright": "Barcha huquqlar himoyalangan."
+  },
+  "privacy": {
+    "title": "Maxfiylik siyosati",
+    "text": "1. Umumiy qoidalar\n\nUshbu shaxsiy ma'lumotlarni qayta ishlash siyosati O'zbekiston Respublikasi qonunchiligi talablariga muvofiq tuzilgan va ImzoMaster tomonidan shaxsiy ma'lumotlarni qayta ishlash tartibi va shaxsiy ma'lumotlar xavfsizligini ta'minlash choralarini belgilaydi.\n\n2. Ma'lumotlarni yig'ish va ishlatish\n\nBiz faqat saytdagi qayta aloqa formasi orqali ixtiyoriy ravishda taqdim etilgan shaxsiy ma'lumotlarni yig'amiz: ism, telefon raqami, elektron pochta manzili.\n\n3. Shaxsiy ma'lumotlarni qayta ishlash maqsadlari\n\n- Mijozlarning so'rovlari va murojaatlarini qayta ishlash\n- Buyurtma tafsilotlarini aniqlashtirish uchun mijoz bilan bog'lanish\n- Kompaniya mahsulotlari va xizmatlari haqida ma'lumot berish\n\n4. Ma'lumotlarni uchinchi shaxslarga berish\n\nQonunchilikda nazarda tutilgan holatlar bundan mustasno, biz sizning shaxsiy ma'lumotlaringizni roziligingizsiz uchinchi shaxslarga bermaymiz.\n\n5. Axborot himoyasi\n\nBiz shaxsiy ma'lumotlaringizni ruxsatsiz kirish, o'zgartirish, oshkor qilish yoki yo'q qilishdan himoya qilish uchun zarur tashkiliy va texnik choralarni ko'ramiz.\n\n6. Aloqa ma'lumotlari\n\nShaxsiy ma'lumotlarni qayta ishlash bo'yicha barcha savollar bo'yicha biz bilan bog'lanishingiz mumkin:\n- Telefon: +998 95 388 80 80\n- Email: info@imzo-evolution.uz\n- Manzil: Toshkent sh., Yunusobod tumani"
+  },
+  "officeMap": {
+    "title": "Ofislarimiz xaritada",
+    "subtitle": "Toshkentdagi ofisimizga tashrif buyuring",
+    "directions": "Yo'nalish olish",
+    "offices": [
+      { "name": "ImzoMaster — Yunusobod tumani", "address": "Toshkent sh., Yunusobod tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Mirzo Ulug'bek tumani", "address": "Toshkent sh., Mirzo Ulug'bek tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Olmazor tumani", "address": "Toshkent sh., Olmazor tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Shayxontohur tumani", "address": "Toshkent sh., Shayxontohur tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Sergeli tumani", "address": "Toshkent sh., Sergeli tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Chilonzor tumani", "address": "Toshkent sh., Chilonzor tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Uchtepa tumani", "address": "Toshkent sh., Uchtepa tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Yakkasaroy tumani", "address": "Toshkent sh., Yakkasaroy tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Mirobod tumani", "address": "Toshkent sh., Mirobod tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Yashnobod tumani", "address": "Toshkent sh., Yashnobod tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Bektemir tumani", "address": "Toshkent sh., Bektemir tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" }
+    ]
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "message": "So'ralgan sahifa mavjud emas yoki ko'chirilgan.",
+    "back": "Bosh sahifaga"
+  }
+}
