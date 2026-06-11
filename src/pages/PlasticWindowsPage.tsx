@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { HiPhone, HiMail, HiArrowRight } from 'react-icons/hi';
+import { HiPhone } from 'react-icons/hi';
+import { FaTelegramPlane } from 'react-icons/fa';
 import PageHero from '../components/ui/PageHero';
 import Seo from '../components/ui/Seo';
 
@@ -96,7 +97,7 @@ export default function PlasticWindowsPage() {
           <p>{t('contact.intro')}</p>
           <div className="cta-actions">
             <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-primary"><HiPhone />{t('common.phone')}</a>
-            <a href={`mailto:${t('common.email')}`} className="btn btn-outline"><HiMail /><HiArrowRight />{t('cta.call')}</a>
+            <a href={t('common.telegramUrl')} target="_blank" rel="noopener noreferrer" className="btn btn-outline"><FaTelegramPlane />{t('cta.call')}</a>
           </div>
         </div>
       </section>

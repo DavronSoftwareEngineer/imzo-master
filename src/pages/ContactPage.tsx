@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { HiPhone, HiMail, HiLocationMarker, HiClock, HiArrowRight, HiUser } from 'react-icons/hi';
+import { HiPhone, HiMail, HiLocationMarker, HiClock, HiUser } from 'react-icons/hi';
 import { FaTelegramPlane } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 import { useState, type FormEvent } from 'react';
@@ -147,7 +147,7 @@ export default function ContactPage() {
           <p>{t('contact.intro')}</p>
           <div className="cta-actions">
             <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-primary"><HiPhone />{t('common.phone')}</a>
-            <a href={`mailto:${t('common.email')}`} className="btn btn-outline"><HiMail /><HiArrowRight />{t('cta.call')}</a>
+            <a href={t('common.telegramUrl')} target="_blank" rel="noopener noreferrer" className="btn btn-outline"><FaTelegramPlane />{t('cta.call')}</a>
           </div>
         </div>
       </section>

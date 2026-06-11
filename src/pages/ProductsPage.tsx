@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { HiArrowRight, HiPhone, HiMail } from 'react-icons/hi';
+import { HiArrowRight, HiPhone } from 'react-icons/hi';
+import { FaTelegramPlane } from 'react-icons/fa';
 import PageHero from '../components/ui/PageHero';
 import Seo from '../components/ui/Seo';
 
@@ -51,7 +52,7 @@ export default function ProductsPage() {
           <p>{t('contact.intro')}</p>
           <div className="cta-actions">
             <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-primary"><HiPhone />{t('common.phone')}</a>
-            <a href={`mailto:${t('common.email')}`} className="btn btn-outline"><HiMail /><HiArrowRight />{t('cta.call')}</a>
+            <a href={t('common.telegramUrl')} target="_blank" rel="noopener noreferrer" className="btn btn-outline"><FaTelegramPlane />{t('cta.call')}</a>
           </div>
         </div>
       </section>
