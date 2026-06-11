@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { HiCheckCircle, HiShieldCheck, HiCash, HiClipboardList, HiTruck, HiSparkles, HiLightningBolt, HiPhone, HiMail, HiArrowRight } from 'react-icons/hi';
 import PageHero from '../components/ui/PageHero';
+import Seo from '../components/ui/Seo';
 
 const icons = [HiShieldCheck, HiCash, HiClipboardList, HiTruck, HiSparkles, HiLightningBolt];
 
@@ -12,6 +13,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <Seo title={t('about.title')} description={t('about.subtitle')} />
       <PageHero title={t('about.title')} subtitle={t('about.subtitle')} />
 
       {/* Company story */}
@@ -23,18 +25,18 @@ export default function AboutPage() {
                 <h2>{t('about.aboutTitle')}</h2>
                 <div className="accent-line" style={{ justifyContent:'flex-start' }}><span/><span/></div>
               </div>
-              <p style={{ color:'#64748b', lineHeight:1.7, marginBottom:24 }}>{t('about.description')}</p>
+              <p style={{ color:'var(--text-muted)', lineHeight:1.7, marginBottom:24 }}>{t('about.description')}</p>
               <div style={{ background:'rgba(212,168,46,0.06)', border:'1px solid rgba(212,168,46,0.2)', borderRadius:16, padding:'14px 18px', display:'inline-flex', alignItems:'center', gap:12 }}>
                 <div style={{ width:40, height:40, background:'#d4a82e', borderRadius:12, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
                   <span style={{ color:'#fff', fontWeight:700 }}>📞</span>
                 </div>
                 <div>
-                  <div style={{ fontSize:10, color:'#94a3b8', fontWeight:600, textTransform:'uppercase', letterSpacing:1 }}>{t('about.contactUs')}</div>
-                  <div style={{ fontWeight:700, color:'#0f172a', fontSize:15 }}>{t('common.phone')}</div>
+                  <div style={{ fontSize:10, color:'var(--text-muted2)', fontWeight:600, textTransform:'uppercase', letterSpacing:1 }}>{t('about.contactUs')}</div>
+                  <div style={{ fontWeight:700, color:'var(--text-heading)', fontSize:15 }}>{t('common.phone')}</div>
                 </div>
               </div>
             </div>
-            <div style={{ background:'linear-gradient(135deg, #0f172a, #1e3a5f)', borderRadius:20, padding:36, color:'#fff' }}>
+            <div style={{ background:'linear-gradient(135deg, #0f172a, #1e3a5f)', borderRadius:20, padding:'clamp(24px, 6vw, 36px)', color:'#fff' }}>
               <h3 style={{ fontSize:20, fontWeight:700, marginBottom:20, textAlign:'center' }}>{t('about.listTitle')}</h3>
               <div style={{ display:'flex', flexDirection:'column', gap:14, maxWidth:320, margin:'0 auto' }}>
                 {Array.isArray(list) && list.map((item: string, i: number) => (
@@ -60,12 +62,12 @@ export default function AboutPage() {
                 <div style={{ width:64, height:64, background:'linear-gradient(135deg, rgba(212,168,46,0.2), rgba(212,168,46,0.05))', borderRadius:20, display:'flex', alignItems:'center', justifyContent:'center', margin:'0 auto 16px' }}>
                   <span style={{ fontSize:36 }}>🏭</span>
                 </div>
-                <div style={{ fontSize:56, fontWeight:900, color:'#0f172a', lineHeight:1.1 }}>2 500</div>
-                <p style={{ color:'#64748b', marginTop:4 }}>{t('about.factoryUnits')}</p>
-                <div style={{ height:4, background:'#f1f5f9', borderRadius:99, overflow:'hidden', marginTop:20 }}>
+                <div style={{ fontSize:'clamp(40px, 11vw, 56px)', fontWeight:900, color:'var(--text-heading)', lineHeight:1.1 }}>2 500</div>
+                <p style={{ color:'var(--text-muted)', marginTop:4 }}>{t('about.factoryUnits')}</p>
+                <div style={{ height:4, background:'var(--surface-soft)', borderRadius:99, overflow:'hidden', marginTop:20 }}>
                   <div style={{ height:'100%', background:'linear-gradient(90deg, #d4a82e, #ecc94b)', borderRadius:99, width:'100%' }} />
                 </div>
-                <p style={{ fontSize:12, color:'#94a3b8', marginTop:8 }}>{t('about.factory100')}</p>
+                <p style={{ fontSize:12, color:'var(--text-muted2)', marginTop:8 }}>{t('about.factory100')}</p>
               </div>
             </div>
             <div style={{ order:1 }}>
@@ -73,7 +75,7 @@ export default function AboutPage() {
                 <h2>{t('about.factoryTitle')}</h2>
                 <div className="accent-line" style={{ justifyContent:'flex-start' }}><span/><span/></div>
               </div>
-              <p style={{ color:'#64748b', lineHeight:1.7, marginBottom:24 }}>{t('about.factoryDesc')}</p>
+              <p style={{ color:'var(--text-muted)', lineHeight:1.7, marginBottom:24 }}>{t('about.factoryDesc')}</p>
               <div className="feature-list">
                 {Array.isArray(factoryFeatures) && factoryFeatures.map((item: string, i: number) => (
                   <div key={i} className="feature-item"><span className="dot"><HiCheckCircle /></span><span>{item}</span></div>

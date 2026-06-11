@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { HiArrowRight, HiPhone, HiMail } from 'react-icons/hi';
 import PageHero from '../components/ui/PageHero';
+import Seo from '../components/ui/Seo';
 
 export default function ProductsPage() {
   const { t } = useTranslation();
@@ -14,6 +15,7 @@ export default function ProductsPage() {
 
   return (
     <>
+      <Seo title={t('products.title')} description={t('products.subtitle')} />
       <PageHero title={t('products.title')} subtitle={t('products.subtitle')} />
       <section className="section bg-surface">
         <div className="contain">

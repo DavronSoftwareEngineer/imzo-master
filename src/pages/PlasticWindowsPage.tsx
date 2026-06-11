@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { HiPhone, HiMail, HiArrowRight } from 'react-icons/hi';
 import PageHero from '../components/ui/PageHero';
+import Seo from '../components/ui/Seo';
 
 export default function PlasticWindowsPage() {
   const { t } = useTranslation();
@@ -40,10 +41,11 @@ export default function PlasticWindowsPage() {
 
   return (
     <>
+      <Seo title={t('plasticWindows.title')} description={t('plasticWindows.subtitle')} />
       <PageHero title={t('plasticWindows.title')} subtitle={t('plasticWindows.subtitle')} />
       <section className="section-sm bg-white">
         <div className="contain text-center" style={{ maxWidth: 720, margin:'0 auto' }}>
-          <p style={{ color:'#64748b', fontSize:16, lineHeight:1.7 }}>{t('plasticWindows.description')}</p>
+          <p style={{ color:'var(--text-muted)', fontSize:16, lineHeight:1.7 }}>{t('plasticWindows.description')}</p>
         </div>
       </section>
 
@@ -54,19 +56,19 @@ export default function PlasticWindowsPage() {
           <section key={model.id} className={`section${i % 2 === 0 ? ' bg-surface' : ' bg-white'}`}>
             <div className="contain">
               <div className="grid-2" style={{ alignItems:'start' }}>
-                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} flex items-center justify-center`} style={{ minHeight: 360 }}>
+                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} flex items-center justify-center`} style={{ minHeight: 'clamp(200px, 42vw, 360px)' }}>
                   <span className="text-7xl py-20">🪟</span>
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <h2 style={{ fontSize:24, fontWeight:800, color:'#0f172a' }}>{t(`plasticWindows.models.${model.id}.name`)}</h2>
+                    <h2 style={{ fontSize:'clamp(20px, 5vw, 24px)', fontWeight:800, color:'var(--text-heading)' }}>{t(`plasticWindows.models.${model.id}.name`)}</h2>
                     <span className="tag" style={{ background:'rgba(212,168,46,0.1)', color:'#b8921a', border:'1px solid rgba(212,168,46,0.2)' }}>
                       {t(`plasticWindows.models.${model.id}.tagline`)}
                     </span>
                   </div>
-                  <p style={{ color:'#64748b', marginBottom:24, lineHeight:1.7 }}>{t(`plasticWindows.models.${model.id}.description`)}</p>
+                  <p style={{ color:'var(--text-muted)', marginBottom:24, lineHeight:1.7 }}>{t(`plasticWindows.models.${model.id}.description`)}</p>
 
-                  <h3 style={{ fontSize:18, fontWeight:700, color:'#0f172a', marginBottom:16 }}>{t('plasticWindows.specs')}</h3>
+                  <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-heading)', marginBottom:16 }}>{t('plasticWindows.specs')}</h3>
                   <div className="spec-table">
                     <table><tbody>
                       {specs.map((s, j) => (

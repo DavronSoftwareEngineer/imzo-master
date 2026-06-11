@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { HiLocationMarker, HiPhone, HiMail, HiArrowUp } from 'react-icons/hi';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const navLinks = [
     { label: t('nav.home'), path: '/' },
@@ -19,6 +20,7 @@ export default function Footer() {
     <footer className="footer">
       <div style={{ position:'relative' }}>
         <button onClick={() => window.scrollTo({ top:0, behavior:'smooth' })}
+          aria-label={i18n.language === 'uz' ? 'Yuqoriga' : 'Наверх'}
           style={{ position:'absolute', top:-20, right:28, width:40, height:40, background:'#d4a82e', borderRadius:12, display:'flex', alignItems:'center', justifyContent:'center', border:0, cursor:'pointer', zIndex:10 }}>
           <HiArrowUp style={{ color:'#0f172a', fontSize:18 }} />
         </button>
@@ -48,6 +50,7 @@ export default function Footer() {
             <div className="footer-title">{t('footer.contacts')}</div>
             <div className="footer-contact">
               <a href={`tel:${t('common.phoneRaw')}`} className="footer-contact-item"><HiPhone />{t('common.phone')}</a>
+              <a href={t('common.telegramUrl')} target="_blank" rel="noopener noreferrer" className="footer-contact-item"><FaTelegramPlane />{t('common.telegram')}</a>
               <a href={`mailto:${t('common.email')}`} className="footer-contact-item"><HiMail />{t('common.email')}</a>
               <div className="footer-contact-item"><HiLocationMarker />{t('common.address')}</div>
             </div>

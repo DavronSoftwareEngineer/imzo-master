@@ -2,11 +2,13 @@
   "common": {
     "siteName": "ImzoMaster",
     "tagline": "Toshkentda plastik va alyumin oyna va eshiklar ishlab chiqarish va o'rnatish",
-    "phone": "+998 95 388 80 80",
-    "phoneRaw": "+998953888080",
+    "phone": "+998 99 888 57 37",
+    "phoneRaw": "+998998885737",
     "email": "info@imzo-evolution.uz",
     "address": "Toshkent sh., Yunusobod tumani",
-    "shortAddress": "Toshkent, Yunusobod"
+    "shortAddress": "Toshkent, Yunusobod",
+    "telegram": "@Akmal742",
+    "telegramUrl": "https://t.me/Akmal742"
   },
   "nav": {
     "home": "Bosh sahifa",
@@ -324,6 +326,7 @@
     "heading": "Biz bilan bog'laning",
     "intro": "So'rov qoldiring yoki to'g'ridan-to'g'ri qo'ng'iroq qiling. Mutaxassislarimiz optimal yechimni tanlashda yordam beradi va barcha savollarga javob beradi.",
     "phone": "Telefon",
+    "telegram": "Telegram",
     "email": "Email",
     "address": "Manzil",
     "workHours": "Ish vaqti",
@@ -336,8 +339,10 @@
     "formEmail": "Email (ixtiyoriy)",
     "formEmailPlaceholder": "example@mail.ru",
     "formSubmit": "So'rov yuborish",
+    "formSending": "Yuborilmoqda...",
     "formSuccess": "So'rovingiz uchun rahmat!",
-    "formSuccessDesc": "Biz siz bilan tez orada bog'lanamiz."
+    "formSuccessDesc": "Biz siz bilan tez orada bog'lanamiz.",
+    "formError": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring yoki bizga qo'ng'iroq qiling."
   },
   "cta": {
     "title": "Loyihangizni muhokama qilishga tayyormisiz?",
@@ -352,24 +357,24 @@
   },
   "privacy": {
     "title": "Maxfiylik siyosati",
-    "text": "1. Umumiy qoidalar\n\nUshbu shaxsiy ma'lumotlarni qayta ishlash siyosati O'zbekiston Respublikasi qonunchiligi talablariga muvofiq tuzilgan va ImzoMaster tomonidan shaxsiy ma'lumotlarni qayta ishlash tartibi va shaxsiy ma'lumotlar xavfsizligini ta'minlash choralarini belgilaydi.\n\n2. Ma'lumotlarni yig'ish va ishlatish\n\nBiz faqat saytdagi qayta aloqa formasi orqali ixtiyoriy ravishda taqdim etilgan shaxsiy ma'lumotlarni yig'amiz: ism, telefon raqami, elektron pochta manzili.\n\n3. Shaxsiy ma'lumotlarni qayta ishlash maqsadlari\n\n- Mijozlarning so'rovlari va murojaatlarini qayta ishlash\n- Buyurtma tafsilotlarini aniqlashtirish uchun mijoz bilan bog'lanish\n- Kompaniya mahsulotlari va xizmatlari haqida ma'lumot berish\n\n4. Ma'lumotlarni uchinchi shaxslarga berish\n\nQonunchilikda nazarda tutilgan holatlar bundan mustasno, biz sizning shaxsiy ma'lumotlaringizni roziligingizsiz uchinchi shaxslarga bermaymiz.\n\n5. Axborot himoyasi\n\nBiz shaxsiy ma'lumotlaringizni ruxsatsiz kirish, o'zgartirish, oshkor qilish yoki yo'q qilishdan himoya qilish uchun zarur tashkiliy va texnik choralarni ko'ramiz.\n\n6. Aloqa ma'lumotlari\n\nShaxsiy ma'lumotlarni qayta ishlash bo'yicha barcha savollar bo'yicha biz bilan bog'lanishingiz mumkin:\n- Telefon: +998 95 388 80 80\n- Email: info@imzo-evolution.uz\n- Manzil: Toshkent sh., Yunusobod tumani"
+    "text": "1. Umumiy qoidalar\n\nUshbu shaxsiy ma'lumotlarni qayta ishlash siyosati O'zbekiston Respublikasi qonunchiligi talablariga muvofiq tuzilgan va ImzoMaster tomonidan shaxsiy ma'lumotlarni qayta ishlash tartibi va shaxsiy ma'lumotlar xavfsizligini ta'minlash choralarini belgilaydi.\n\n2. Ma'lumotlarni yig'ish va ishlatish\n\nBiz faqat saytdagi qayta aloqa formasi orqali ixtiyoriy ravishda taqdim etilgan shaxsiy ma'lumotlarni yig'amiz: ism, telefon raqami, elektron pochta manzili.\n\n3. Shaxsiy ma'lumotlarni qayta ishlash maqsadlari\n\n- Mijozlarning so'rovlari va murojaatlarini qayta ishlash\n- Buyurtma tafsilotlarini aniqlashtirish uchun mijoz bilan bog'lanish\n- Kompaniya mahsulotlari va xizmatlari haqida ma'lumot berish\n\n4. Ma'lumotlarni uchinchi shaxslarga berish\n\nQonunchilikda nazarda tutilgan holatlar bundan mustasno, biz sizning shaxsiy ma'lumotlaringizni roziligingizsiz uchinchi shaxslarga bermaymiz.\n\n5. Axborot himoyasi\n\nBiz shaxsiy ma'lumotlaringizni ruxsatsiz kirish, o'zgartirish, oshkor qilish yoki yo'q qilishdan himoya qilish uchun zarur tashkiliy va texnik choralarni ko'ramiz.\n\n6. Aloqa ma'lumotlari\n\nShaxsiy ma'lumotlarni qayta ishlash bo'yicha barcha savollar bo'yicha biz bilan bog'lanishingiz mumkin:\n- Telefon: +998 99 888 57 37\n- Email: info@imzo-evolution.uz\n- Manzil: Toshkent sh., Yunusobod tumani"
   },
   "officeMap": {
     "title": "Ofislarimiz xaritada",
     "subtitle": "Toshkentdagi ofisimizga tashrif buyuring",
     "directions": "Yo'nalish olish",
     "offices": [
-      { "name": "ImzoMaster — Yunusobod tumani", "address": "Toshkent sh., Yunusobod tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Mirzo Ulug'bek tumani", "address": "Toshkent sh., Mirzo Ulug'bek tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Olmazor tumani", "address": "Toshkent sh., Olmazor tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Shayxontohur tumani", "address": "Toshkent sh., Shayxontohur tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Sergeli tumani", "address": "Toshkent sh., Sergeli tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Chilonzor tumani", "address": "Toshkent sh., Chilonzor tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Uchtepa tumani", "address": "Toshkent sh., Uchtepa tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Yakkasaroy tumani", "address": "Toshkent sh., Yakkasaroy tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Mirobod tumani", "address": "Toshkent sh., Mirobod tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Yashnobod tumani", "address": "Toshkent sh., Yashnobod tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Bektemir tumani", "address": "Toshkent sh., Bektemir tumani", "phone": "+998 95 388 80 80", "workTime": "Dush–Shan: 9:00 – 18:00" }
+      { "name": "ImzoMaster — Yunusobod tumani", "address": "Toshkent sh., Yunusobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Mirzo Ulug'bek tumani", "address": "Toshkent sh., Mirzo Ulug'bek tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Olmazor tumani", "address": "Toshkent sh., Olmazor tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Shayxontohur tumani", "address": "Toshkent sh., Shayxontohur tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Sergeli tumani", "address": "Toshkent sh., Sergeli tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Chilonzor tumani", "address": "Toshkent sh., Chilonzor tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Uchtepa tumani", "address": "Toshkent sh., Uchtepa tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Yakkasaroy tumani", "address": "Toshkent sh., Yakkasaroy tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Mirobod tumani", "address": "Toshkent sh., Mirobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Yashnobod tumani", "address": "Toshkent sh., Yashnobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
+      { "name": "ImzoMaster — Bektemir tumani", "address": "Toshkent sh., Bektemir tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" }
     ]
   },
   "notFound": {

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { HiShieldCheck, HiTruck, HiCash, HiArrowRight, HiCheckCircle, HiPhone, HiMail, HiClipboardCheck, HiCog, HiTruck as HiDelivery, HiHome } from 'react-icons/hi';
 import { lazy, Suspense } from 'react';
+import Seo from '../components/ui/Seo';
 const OfficeMapSection = lazy(() => import('../components/map/OfficeMapSection'));
 
 const processIcons = [HiClipboardCheck, HiCog, HiDelivery, HiHome];
@@ -33,6 +34,7 @@ export default function HomePage() {
 
   return (
     <>
+      <Seo title={t('home.heroTitle')} description={t('home.heroSubtitle')} />
       {/* ═══ HERO ═══ */}
       <section className="bg-mesh text-white hero">
         <div className="contain">
@@ -100,13 +102,13 @@ export default function HomePage() {
               return (
                 <div key={i} className="text-center">
                   <div style={{ width:72, height:72, margin:'0 auto 16px', position:'relative' }}>
-                    <div style={{ width:72, height:72, background:'#fff', borderRadius:24, display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 4px 16px rgba(0,0,0,0.06)' }}>
-                      <Icon style={{ fontSize:30, color:'#0f172a' }} />
+                    <div style={{ width:72, height:72, background:'var(--surface)', borderRadius:24, display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 4px 16px var(--shadow)' }}>
+                      <Icon style={{ fontSize:30, color:'var(--text-heading)' }} />
                     </div>
-                    <div style={{ position:'absolute', top:-6, right:-6, width:26, height:26, borderRadius:'50%', background:'#0f172a', color:'#fff', fontSize:13, fontWeight:700, display:'flex', alignItems:'center', justifyContent:'center' }}>{i+1}</div>
+                    <div style={{ position:'absolute', top:-6, right:-6, width:26, height:26, borderRadius:'50%', background:'var(--primary)', color:'var(--primary-text)', fontSize:13, fontWeight:700, display:'flex', alignItems:'center', justifyContent:'center' }}>{i+1}</div>
                   </div>
-                  <h4 style={{ fontSize:16, fontWeight:700, color:'#0f172a', marginBottom:6 }}>{step.title}</h4>
-                  <p style={{ fontSize:14, color:'#64748b', lineHeight:1.5 }}>{step.desc}</p>
+                  <h4 style={{ fontSize:16, fontWeight:700, color:'var(--text-heading)', marginBottom:6 }}>{step.title}</h4>
+                  <p style={{ fontSize:14, color:'var(--text-muted)', lineHeight:1.5 }}>{step.desc}</p>
                 </div>
               );
             })}
@@ -168,12 +170,12 @@ export default function HomePage() {
                 <div style={{ width:64, height:64, background:'linear-gradient(135deg, rgba(212,168,46,0.2), rgba(212,168,46,0.05))', borderRadius:20, display:'flex', alignItems:'center', justifyContent:'center', margin:'0 auto 16px' }}>
                   <span style={{ fontSize:36 }}>🏭</span>
                 </div>
-                <div style={{ fontSize:56, fontWeight:900, color:'#0f172a', lineHeight:1.1 }}>2 500</div>
-                <p style={{ color:'#64748b', marginTop:4 }}>{t('home.factoryUnits')}</p>
-                <div style={{ height:4, background:'#f1f5f9', borderRadius:99, overflow:'hidden', marginTop:20 }}>
+                <div style={{ fontSize:'clamp(40px, 11vw, 56px)', fontWeight:900, color:'var(--text-heading)', lineHeight:1.1 }}>2 500</div>
+                <p style={{ color:'var(--text-muted)', marginTop:4 }}>{t('home.factoryUnits')}</p>
+                <div style={{ height:4, background:'var(--surface-soft)', borderRadius:99, overflow:'hidden', marginTop:20 }}>
                   <div style={{ height:'100%', background:'linear-gradient(90deg, #d4a82e, #ecc94b)', borderRadius:99, width:'100%' }} />
                 </div>
-                <p style={{ fontSize:12, color:'#94a3b8', marginTop:8 }}>{t('home.factoryDesc')}</p>
+                <p style={{ fontSize:12, color:'var(--text-muted2)', marginTop:8 }}>{t('home.factoryDesc')}</p>
               </div>
             </div>
           </div>
@@ -181,7 +183,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ OFFICE MAP ═══ */}
-      <Suspense fallback={<section className="office-map-section"><div className="contain text-center" style={{padding:'80px 0',color:'#94a3b8'}}>Xarita yuklanmoqda...</div></section>}>
+      <Suspense fallback={<section className="office-map-section"><div className="contain text-center" style={{padding:'80px 0',color:'var(--text-muted2)'}}>Xarita yuklanmoqda...</div></section>}>
         <OfficeMapSection />
       </Suspense>
 

@@ -52,6 +52,10 @@ export default function OfficeMapSection() {
   const officeData: Office[] = t('officeMap.offices', { returnObjects: true }) as unknown as Office[];
   const offices = officeData.map((o, i) => ({ ...officeCoords[i], ...o }));
 
+  // The map is initialised once. Markers read offices through this ref (seeded
+  // with the first render's value) so the init effect stays dependency-free.
+  const officesRef = useRef(offices);
+
   const flyTo = useCallback((lng: number, lat: number) => {
     mapRef.current?.flyTo({ center: [lng, lat], zoom: 15, pitch: 60, duration: 1600 });
   }, []);
@@ -77,7 +81,7 @@ export default function OfficeMapSection() {
     mapRef.current = map;
 
     map.on('load', () => {
-      offices.forEach((office) => {
+      officesRef.current.forEach((office) => {
         const el = buildMarkerEl();
 
         const popup = new maplibregl.Popup({ offset: [0, -22], closeButton: true, maxWidth: '280px' })
