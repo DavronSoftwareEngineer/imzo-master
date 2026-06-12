@@ -57,7 +57,7 @@ export default function Header({ theme, onThemeToggle }: HeaderProps) {
     <header className={`header${scrolled ? ' scrolled' : ''}`}>
       <div className="header-inner">
         <Link to="/" className="header-logo">
-          <img src="/imageImzo.png" alt={t('common.siteName')} className="header-logo-img" />
+          <img src={theme === 'dark' ? '/imzoLight.svg' : '/imzoDark.svg'} alt={t('common.siteName')} className="header-logo-img" />
           <div className="header-logo-text">
             <div className="header-logo-brand">Imzo<span>Master</span></div>
             <span className="header-logo-sub">{t('common.shortAddress')}</span>
