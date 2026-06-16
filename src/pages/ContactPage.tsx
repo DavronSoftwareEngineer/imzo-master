@@ -51,8 +51,8 @@ function ContactForm() {
   };
 
   if (status === 'success') return (
-    <div className="card card-body text-center" style={{ background:'var(--tag-bg)', border:'1px solid var(--tag-border)' }}>
-      <div style={{ fontSize:40, marginBottom:12 }}>&#10003;</div>
+    <div className="card card-body text-center success-pop" style={{ background:'var(--tag-bg)', border:'1px solid var(--tag-border)' }}>
+      <div className="success-check">&#10003;</div>
       <h3 style={{ color:'var(--tag-text)', marginBottom:6 }}>{t('contact.formSuccess')}</h3>
       <p style={{ color:'var(--tag-text)', fontSize:14 }}>{t('contact.formSuccessDesc')}</p>
     </div>

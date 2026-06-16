@@ -2,7 +2,7 @@ import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Elements matching these selectors animate into view as the user scrolls.
-const SELECTOR = '.section-header, .card, .feature-item, .stat-card, .office-card, .spec-table, [data-reveal]';
+const SELECTOR = '.section-header, .card, .feature-item, .stat-card, .office-card, .spec-table, .portfolio-card, .review-card, .promo-band, .warranty-item, .faq-item, .callback-band, [data-reveal]';
 
 /**
  * Adds a fade-up reveal animation to key elements when they enter the viewport.

@@ -6,6 +6,7 @@ import ProductsPage from './pages/ProductsPage';
 import PlasticWindowsPage from './pages/PlasticWindowsPage';
 import AluminumWindowsPage from './pages/AluminumWindowsPage';
 import ForCafesPage from './pages/ForCafesPage';
+import CalculatorPage from './pages/CalculatorPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="plastic-windows" element={<PlasticWindowsPage />} />
             <Route path="aluminum-windows" element={<AluminumWindowsPage />} />
             <Route path="for-cafes" element={<ForCafesPage />} />
+            <Route path="calculator" element={<CalculatorPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="privacy-policy" element={<PrivacyPolicyPage />} />

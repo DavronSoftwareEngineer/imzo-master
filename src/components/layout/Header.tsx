@@ -49,6 +49,7 @@ export default function Header({ theme, onThemeToggle }: HeaderProps) {
     { label: t('nav.plasticWindows'), path: '/plastic-windows' },
     { label: t('nav.aluminumWindows'), path: '/aluminum-windows' },
     { label: t('nav.forCafes'), path: '/for-cafes' },
+    { label: t('nav.calculator'), path: '/calculator' },
     { label: t('nav.about'), path: '/about' },
     { label: t('nav.contact'), path: '/contact' },
   ];

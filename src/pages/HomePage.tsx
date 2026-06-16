@@ -1,12 +1,67 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { HiShieldCheck, HiTruck, HiCash, HiArrowRight, HiCheckCircle, HiPhone, HiClipboardCheck, HiCog, HiTruck as HiDelivery, HiHome } from 'react-icons/hi';
+import { HiShieldCheck, HiTruck, HiCash, HiArrowRight, HiCheckCircle, HiPhone, HiClipboardCheck, HiCog, HiTruck as HiDelivery, HiHome, HiCreditCard, HiClipboardList, HiBadgeCheck, HiOfficeBuilding, HiChevronDown } from 'react-icons/hi';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { lazy, Suspense } from 'react';
+import type { IconType } from 'react-icons';
+import { lazy, Suspense, useState, useEffect, type FormEvent } from 'react';
 import Seo from '../components/ui/Seo';
+import ProductSlider from '../components/ui/ProductSlider';
+import { sendLeadToTelegram, isTelegramConfigured } from '../lib/telegram';
 const OfficeMapSection = lazy(() => import('../components/map/OfficeMapSection'));
 
 const processIcons = [HiClipboardCheck, HiCog, HiDelivery, HiHome];
+const warrantyIcons: Record<string, IconType> = { shield: HiShieldCheck, badge: HiBadgeCheck, ruler: HiClipboardList, factory: HiOfficeBuilding };
+const BASE = import.meta.env.BASE_URL;
+const portfolioImgs = ['portfolio/p1.jpg', 'portfolio/p2.jpg', 'portfolio/p3.jpg', 'portfolio/p4.jpg', 'portfolio/p5.jpg', 'portfolio/p6.jpg', 'portfolio/p7.jpg'];
+
+function CallbackForm() {
+  const { t } = useTranslation();
+  const [phone, setPhone] = useState('');
+  const [done, setDone] = useState(false);
+  const submit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!phone.trim()) return;
+    if (isTelegramConfigured()) {
+      sendLeadToTelegram({ name: t('home.callbackBtn'), phone }).catch(() => {});
+    } else {
+      const msg = `${t('home.callbackTitle')}: ${phone}`;
+      window.open(`${t('common.telegramUrl')}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+    }
+    setDone(true);
+  };
+  if (done) return (
+    <div className="success-pop" style={{ textAlign: 'center' }}>
+      <div className="success-check">&#10003;</div>
+      <p style={{ color: 'var(--text-heading)', fontWeight: 700 }}>{t('home.callbackSuccess')}</p>
+    </div>
+  );
+  return (
+    <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t('home.callbackPhonePlaceholder')}
+        style={{ width: '100%', padding: '14px 16px', border: '1px solid var(--border)', borderRadius: 12, fontSize: 15, outline: 'none', background: 'var(--surface)', color: 'var(--text)' }} />
+      <button type="submit" className="btn btn-primary" style={{ justifyContent: 'center' }}><HiPhone />{t('home.callbackBtn')}</button>
+      <p className="callback-note" style={{ textAlign: 'center' }}>{t('home.callbackNote')}</p>
+    </form>
+  );
+}
+
+function FaqList() {
+  const { t } = useTranslation();
+  const faq = t('home.faq', { returnObjects: true }) as unknown as { q: string; a: string }[];
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <div className="faq-list">
+      {Array.isArray(faq) && faq.map((f, i) => (
+        <div key={i} className={`faq-item${open === i ? ' open' : ''}`}>
+          <button className="faq-q" onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i}>
+            <span>{f.q}</span><HiChevronDown className="chev" />
+          </button>
+          <div className="faq-a"><p>{f.a}</p></div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -24,48 +79,52 @@ export default function HomePage() {
     { icon: '🤖', value: t('home.statAuto'), label: t('home.statAutoLabel') },
   ];
 
-  const categories = [
-    { link: '/plastic-windows', img: 'products/rehau-artevo.png', key: 'pvc', gradient: 'from-blue-500 to-cyan-600' },
-    { link: '/aluminum-windows', img: 'products/thermo65.png', key: 'aluminum', gradient: 'from-slate-600 to-slate-800' },
-    { link: '/for-cafes', img: 'products/bioclimatic.jpg', key: 'cafe', gradient: 'from-amber-500 to-orange-600' },
-  ];
-
   const factoryFacts = t('home.factoryFacts', { returnObjects: true }) as unknown as string[];
   const workSteps = t('home.howWeWork', { returnObjects: true }) as unknown as { title: string; desc: string }[];
+  const heroSlides = t('home.heroSlides', { returnObjects: true }) as unknown as { eyebrow: string; title: string; subtitle: string }[];
+  const portfolio = t('home.portfolio', { returnObjects: true }) as unknown as { name: string; type: string }[];
+  const reviews = t('home.reviews', { returnObjects: true }) as unknown as { name: string; role: string; text: string; rating: number }[];
+  const partners = t('home.partners', { returnObjects: true }) as unknown as string[];
+  const warranty = t('home.warranty', { returnObjects: true }) as unknown as { icon: string; title: string; desc: string }[];
+
+  // Hero slider — auto-advance.
+  const slideCount = Array.isArray(heroSlides) ? heroSlides.length : 0;
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    if (slideCount <= 1) return;
+    const id = setInterval(() => setSlide((s) => (s + 1) % slideCount), 6000);
+    return () => clearInterval(id);
+  }, [slideCount]);
+  const active = Array.isArray(heroSlides) && heroSlides[slide] ? heroSlides[slide] : { eyebrow: t('home.statYearsLabel'), title: t('home.heroTitle'), subtitle: t('home.heroSubtitle') };
 
   return (
     <>
       <Seo title={t('home.heroTitle')} description={t('home.heroSubtitle')} />
-      {/* ═══ HERO ═══ */}
-      <section className="bg-mesh text-white hero">
-        <div className="contain">
-          <div className="text-center mx-auto" style={{ maxWidth: 640 }}>
-            <div className="flex items-center justify-center gap-2 mb-5">
-              <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-1.5 text-sm text-accent font-medium">
-                <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"/><span className="relative inline-flex rounded-full h-2 w-2 bg-accent"/></span>
-                {t('home.statYearsLabel')}: <b>{t('home.statYears')}</b>
-              </span>
-            </div>
-            <h1>{t('home.heroTitle')}</h1>
-            <p className="mx-auto" style={{ maxWidth: 520 }}>{t('home.heroSubtitle')}</p>
-            <div className="hero-actions justify-center">
-              <Link to="/products" className="btn btn-primary"><HiArrowRight />{t('home.heroCta1')}</Link>
-              <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-outline"><HiPhone />{t('common.phone')}</a>
-            </div>
-          </div>
 
-          {/* Stats strip */}
-          <div className="stats-grid">
-            {stats.map((s) => (
-              <div key={s.label} className="stat-card bg-white/5 border border-white/10">
-                <div className="stat-icon">{s.icon}</div>
-                <div className="stat-value text-white">{s.value}</div>
-                <div className="stat-label text-white/60">{s.label}</div>
+      {/* ═══ PORTFOLIO ═══ */}
+      <section className="section bg-white">
+        <div className="contain">
+          <div className="section-header">
+            <h2>{t('home.portfolioTitle')}</h2>
+            <div className="accent-line"><span/><span/></div>
+            <p>{t('home.portfolioSubtitle')}</p>
+          </div>
+          <div className="grid-3" style={{ marginTop: 40 }}>
+            {Array.isArray(portfolio) && portfolio.map((pf, i) => (
+              <div key={pf.name} className="portfolio-card">
+                <img src={BASE + portfolioImgs[i % portfolioImgs.length]} alt={pf.name} loading="lazy" />
+                <div className="portfolio-overlay">
+                  <div className="pf-name">{pf.name}</div>
+                  <div className="pf-type">{pf.type}</div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* ═══ PRODUCT SLIDER ═══ */}
+      <ProductSlider />
 
       {/* ═══ ADVANTAGES ═══ */}
       <section className="section bg-white">
@@ -89,8 +148,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ HOW WE WORK ═══ */}
+      {/* ═══ WARRANTY / TRUST BADGES ═══ */}
       <section className="section bg-surface">
+        <div className="contain">
+          <div className="warranty-grid">
+            {Array.isArray(warranty) && warranty.map((w) => {
+              const Icon = warrantyIcons[w.icon] || HiBadgeCheck;
+              return (
+                <div key={w.title} className="warranty-item">
+                  <span className="warranty-icon"><Icon /></span>
+                  <span className="w-title">{w.title}</span>
+                  <span className="w-desc">{w.desc}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ HERO (slider) ═══ */}
+      <section className="bg-mesh text-white hero">
+        <div className="contain">
+          <div className="text-center mx-auto" style={{ maxWidth: 660 }}>
+            <div key={slide} className="hero-slide">
+              <div className="flex items-center justify-center gap-2 mb-5">
+                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-1.5 text-sm text-accent font-medium">
+                  <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"/><span className="relative inline-flex rounded-full h-2 w-2 bg-accent"/></span>
+                  {active.eyebrow}
+                </span>
+              </div>
+              <h1>{active.title}</h1>
+              <p className="mx-auto" style={{ maxWidth: 540 }}>{active.subtitle}</p>
+            </div>
+            <div className="hero-actions justify-center">
+              <Link to="/products" className="btn btn-primary"><HiArrowRight />{t('home.heroCta1')}</Link>
+              <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-outline"><HiPhone />{t('common.phone')}</a>
+            </div>
+            {slideCount > 1 && (
+              <div className="hero-dots">
+                {heroSlides.map((_, i) => (
+                  <button key={i} className={`hero-dot${i === slide ? ' active' : ''}`} onClick={() => setSlide(i)} aria-label={`Slayd ${i + 1}`} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Stats strip */}
+          <div className="stats-grid">
+            {stats.map((s) => (
+              <div key={s.label} className="stat-card bg-white/5 border border-white/10">
+                <div className="stat-icon">{s.icon}</div>
+                <div className="stat-value text-white">{s.value}</div>
+                <div className="stat-label text-white/60">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ INSTALLMENT BANNER ═══ */}
+      <section className="section bg-surface">
+        <div className="contain">
+          <div className="promo-band">
+            <div>
+              <div className="promo-eyebrow">{t('home.installmentCta')}</div>
+              <h2>{t('home.installmentTitle')}</h2>
+              <p>{t('home.installmentDesc')}</p>
+            </div>
+            <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-primary" style={{ flexShrink:0 }}><HiCreditCard />{t('home.installmentCta')}</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ HOW WE WORK ═══ */}
+      <section className="section bg-white">
         <div className="contain">
           <div className="section-header">
             <h2>{t('home.howWeWorkTitle')}</h2>
@@ -117,32 +248,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ PRODUCT CATEGORIES ═══ */}
-      <section className="section bg-white">
+      {/* ═══ REVIEWS ═══ */}
+      <section className="section bg-surface">
         <div className="contain">
           <div className="section-header">
-            <h2>{t('home.productsTitle')}</h2>
+            <h2>{t('home.reviewsTitle')}</h2>
             <div className="accent-line"><span/><span/></div>
-            <p>{t('home.productsSubtitle')}</p>
+            <p>{t('home.reviewsSubtitle')}</p>
           </div>
           <div className="grid-3" style={{ marginTop: 40 }}>
-            {categories.map((cat) => (
-              <Link key={cat.link} to={cat.link} className="card">
-                <div className={`h-48 bg-gradient-to-br ${cat.gradient} relative overflow-hidden`}>
-                  <img src={import.meta.env.BASE_URL + cat.img} alt={t(`products.categories.${cat.key}.title`)} loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }} />
-                  <div className="absolute inset-0 bg-black/15" />
+            {Array.isArray(reviews) && reviews.map((r) => (
+              <div key={r.name} className="review-card">
+                <div className="review-stars">{'★'.repeat(r.rating)}{'☆'.repeat(Math.max(0, 5 - r.rating))}</div>
+                <p className="review-text">“{r.text}”</p>
+                <div className="review-meta">
+                  <span className="review-name">{r.name}</span>
+                  <span className="review-role">{r.role}</span>
                 </div>
-                <div className="card-body">
-                  <h3>{t(`products.categories.${cat.key}.title`)}</h3>
-                  <div className="subtitle">{t(`products.categories.${cat.key}.subtitle`)}</div>
-                  <p>{t(`products.categories.${cat.key}.description`)}</p>
-                  <div className="flex items-center gap-1.5 mt-4 text-accent font-semibold text-sm">
-                    {t('products.details')}
-                    <HiArrowRight />
-                  </div>
-                </div>
-              </Link>
+              </div>
             ))}
+          </div>
+
+          {/* Partners strip */}
+          <div className="section-header" style={{ marginTop: 56, marginBottom: 0 }}>
+            <p style={{ fontWeight:600, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:1, fontSize:13 }}>{t('home.partnersTitle')}</p>
+          </div>
+          <div className="partners-strip">
+            {Array.isArray(partners) && partners.map((p) => (
+              <span key={p} className="partner-logo">{p}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ CALLBACK ═══ */}
+      <section className="section bg-white">
+        <div className="contain">
+          <div className="callback-band">
+            <div>
+              <h2>{t('home.callbackTitle')}</h2>
+              <p>{t('home.callbackDesc')}</p>
+            </div>
+            <CallbackForm />
           </div>
         </div>
       </section>
@@ -179,6 +326,32 @@ export default function HomePage() {
                 <p style={{ fontSize:12, color:'var(--text-muted2)', marginTop:8 }}>{t('home.factoryDesc')}</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ FAQ ═══ */}
+      <section className="section bg-white">
+        <div className="contain">
+          <div className="section-header">
+            <h2>{t('home.faqTitle')}</h2>
+            <div className="accent-line"><span/><span/></div>
+            <p>{t('home.faqSubtitle')}</p>
+          </div>
+          <FaqList />
+        </div>
+      </section>
+
+      {/* ═══ FREE MEASUREMENT CTA ═══ */}
+      <section className="section bg-surface">
+        <div className="contain">
+          <div className="promo-band" style={{ background:'linear-gradient(120deg, #b8921a, #d4a82e)' }}>
+            <div>
+              <div className="promo-eyebrow" style={{ color:'rgba(255,255,255,0.85)' }}>{t('home.measureCta')}</div>
+              <h2>{t('home.measureTitle')}</h2>
+              <p style={{ color:'rgba(255,255,255,0.9)' }}>{t('home.measureDesc')}</p>
+            </div>
+            <a href={`tel:${t('common.phoneRaw')}`} className="btn" style={{ flexShrink:0, background:'#0f172a', color:'#fff' }}><HiClipboardList />{t('home.measureCta')}</a>
           </div>
         </div>
       </section>
