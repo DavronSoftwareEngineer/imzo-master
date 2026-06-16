@@ -9,13 +9,26 @@ export default function PlasticWindowsPage() {
   const sl = (key: string) => t(`plasticWindows.models.trio60.specs.${key}`);
 
   const models = [
-    { id: 'trio60', gradient: 'from-blue-400 to-blue-600' },
-    { id: 'quattro60', gradient: 'from-cyan-400 to-cyan-600' },
-    { id: 'engelberg70', gradient: 'from-indigo-400 to-indigo-600' },
-    { id: 'engelberg80', gradient: 'from-violet-400 to-violet-700' },
+    { id: 'rehauArtevo', img: 'products/rehau-artevo.png', gradient: 'from-amber-400 to-amber-600' },
+    { id: 'rehauED70', img: 'products/rehau-ed70.png', gradient: 'from-orange-400 to-orange-600' },
+    { id: 'trio60', img: 'products/trio60.png', gradient: 'from-blue-400 to-blue-600' },
+    { id: 'quattro60', img: 'products/quattro60.png', gradient: 'from-cyan-400 to-cyan-600' },
+    { id: 'engelberg70', img: 'products/engelberg70.png', gradient: 'from-indigo-400 to-indigo-600' },
+    { id: 'engelberg80', img: 'products/engelberg80.png', gradient: 'from-violet-400 to-violet-700' },
   ];
 
   const specData: Record<string, { label: string; value: string }[]> = {
+    rehauArtevo: [
+      { label: sl('type'), value: 'ПВХ / PVX' }, { label: sl('chambers'), value: '6' },
+      { label: sl('mountDepth'), value: '80 мм' }, { label: sl('maxSashHeight'), value: '2800 мм' },
+      { label: sl('maxSashWidth'), value: '1000 мм' }, { label: sl('glassThickness'), value: '56 мм gacha' },
+      { label: sl('thermalInsulation'), value: '0,98 м²·°C/Вт' },
+    ],
+    rehauED70: [
+      { label: sl('type'), value: 'ПВХ / PVX' }, { label: sl('chambers'), value: '5' },
+      { label: sl('mountDepth'), value: '70 мм' }, { label: sl('maxSashHeight'), value: '2400 мм' },
+      { label: sl('maxSashWidth'), value: '1000 мм' }, { label: sl('thermalInsulation'), value: '0,8 м²·°C/Вт' },
+    ],
     trio60: [
       { label: sl('type'), value: 'ПВХ / PVX' }, { label: sl('chambers'), value: '3' },
       { label: sl('wallThickness'), value: '2.8 мм' }, { label: sl('mountDepth'), value: '60 мм' },
@@ -57,8 +70,8 @@ export default function PlasticWindowsPage() {
           <section key={model.id} className={`section${i % 2 === 0 ? ' bg-surface' : ' bg-white'}`}>
             <div className="contain">
               <div className="grid-2" style={{ alignItems:'start' }}>
-                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} flex items-center justify-center`} style={{ minHeight: 'clamp(200px, 42vw, 360px)' }}>
-                  <span className="text-7xl py-20">🪟</span>
+                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} relative`} style={{ height: 'clamp(220px, 42vw, 380px)' }}>
+                  <img src={import.meta.env.BASE_URL + model.img} alt={t(`plasticWindows.models.${model.id}.name`)} loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }} />
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center gap-3 mb-3">

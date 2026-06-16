@@ -16,16 +16,6 @@ interface Office {
 
 const officeCoords = [
   { id: 1,  lng: 69.2870, lat: 41.3660 }, // Yunusobod
-  { id: 2,  lng: 69.3350, lat: 41.3500 }, // Mirzo Ulug'bek
-  { id: 3,  lng: 69.2200, lat: 41.3500 }, // Olmazor
-  { id: 4,  lng: 69.2500, lat: 41.3200 }, // Shayxontohur
-  { id: 5,  lng: 69.2300, lat: 41.2300 }, // Sergeli
-  { id: 6,  lng: 69.2100, lat: 41.2800 }, // Chilonzor
-  { id: 7,  lng: 69.1800, lat: 41.3100 }, // Uchtepa
-  { id: 8,  lng: 69.2600, lat: 41.2900 }, // Yakkasaroy
-  { id: 9,  lng: 69.3000, lat: 41.3000 }, // Mirobod
-  { id: 10, lng: 69.3300, lat: 41.3200 }, // Yashnobod
-  { id: 11, lng: 69.3800, lat: 41.2600 }, // Bektemir
 ];
 
 function buildMarkerEl(): HTMLDivElement {
@@ -72,8 +62,8 @@ export default function OfficeMapSection() {
         },
         layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
       },
-      center: [69.2600, 41.3000],
-      zoom: 11,
+      center: [69.2870, 41.3660],
+      zoom: 14,
       pitch: 60,
     });
 

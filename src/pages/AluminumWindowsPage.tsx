@@ -9,10 +9,14 @@ export default function AluminumWindowsPage() {
   const sl = (key: string) => t(`aluminumWindows.models.thermo57.specs.${key}`);
 
   const models = [
-    { id: 'thermo57', gradient: 'from-slate-400 to-slate-600' },
-    { id: 'thermo65', gradient: 'from-gray-400 to-gray-600' },
-    { id: 'thermo78', gradient: 'from-zinc-500 to-zinc-700' },
-    { id: 'thermo98', gradient: 'from-neutral-600 to-neutral-800' },
+    { id: 'thermo57', img: 'products/thermo57.png', gradient: 'from-slate-400 to-slate-600' },
+    { id: 'thermo64', img: 'products/thermo64.png', gradient: 'from-slate-500 to-slate-700' },
+    { id: 'thermo65', img: 'products/thermo65.png', gradient: 'from-gray-400 to-gray-600' },
+    { id: 'thermo78', img: 'products/thermo78.png', gradient: 'from-zinc-500 to-zinc-700' },
+    { id: 'thermo85', img: 'products/thermo85.png', gradient: 'from-zinc-600 to-zinc-800' },
+    { id: 'thermo98', img: 'products/thermo98.png', gradient: 'from-neutral-600 to-neutral-800' },
+    { id: 'thermo105', img: 'products/thermo105.png', gradient: 'from-stone-600 to-stone-800' },
+    { id: 'champion', img: 'products/champion.png', gradient: 'from-sky-500 to-sky-700' },
   ];
 
   const specData: Record<string, { label: string; value: string }[]> = {
@@ -40,6 +44,29 @@ export default function AluminumWindowsPage() {
       { label: sl('mountDepth'), value: '90 мм' }, { label: sl('sashDepth'), value: '98 мм' },
       { label: sl('thermalBreak'), value: '54 мм' }, { label: sl('coating'), value: 'Анодирование, RAL, Ламинация' },
     ],
+    thermo64: [
+      { label: sl('type'), value: 'Алюминий / Alyumin' }, { label: sl('profileSeries'), value: 'Теплая / Issiq' },
+      { label: sl('mountDepth'), value: '64 мм' }, { label: sl('glassThickness'), value: '6–32 мм' },
+      { label: sl('coating'), value: 'Анодирование, RAL, Ламинация' },
+    ],
+    thermo85: [
+      { label: sl('type'), value: 'Алюминий / Alyumin' }, { label: sl('profileSeries'), value: 'Теплая / Issiq' },
+      { label: sl('mountDepth'), value: '85 мм' }, { label: sl('sashDepth'), value: '85 мм' },
+      { label: sl('coating'), value: 'Анодирование, RAL, Ламинация' },
+    ],
+    thermo105: [
+      { label: sl('type'), value: 'Алюминий / Alyumin' }, { label: sl('profileSeries'), value: 'Теплая / Issiq' },
+      { label: sl('wallThickness'), value: '1,4 мм' }, { label: sl('mountDepth'), value: '98 мм' },
+      { label: sl('sashDepth'), value: '105 мм' }, { label: sl('thermalBreak'), value: '54 мм' },
+      { label: sl('maxSashHeight'), value: '3000 мм' }, { label: sl('maxSashWidth'), value: '1000 мм' },
+      { label: sl('coating'), value: 'Анодирование, RAL, Ламинация' },
+    ],
+    champion: [
+      { label: sl('type'), value: 'Алюминий / Alyumin' }, { label: sl('profileSeries'), value: 'Холодная / Sovuq' },
+      { label: sl('wallThickness'), value: '1,1 мм' }, { label: sl('mountDepth'), value: '47 мм' },
+      { label: sl('maxSashHeight'), value: '2200 мм' }, { label: sl('maxSashWidth'), value: '1100 мм' },
+      { label: sl('glassThickness'), value: '4–24 мм' }, { label: sl('coating'), value: 'Анодирование, RAL, Ламинация' },
+    ],
   };
 
   return (
@@ -59,8 +86,8 @@ export default function AluminumWindowsPage() {
           <section key={model.id} className={`section${i % 2 === 0 ? ' bg-surface' : ' bg-white'}`}>
             <div className="contain">
               <div className="grid-2" style={{ alignItems:'start' }}>
-                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} flex items-center justify-center`} style={{ minHeight: 'clamp(200px, 42vw, 360px)' }}>
-                  <span className="text-7xl py-20">🏢</span>
+                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} relative`} style={{ height: 'clamp(220px, 42vw, 380px)' }}>
+                  <img src={import.meta.env.BASE_URL + model.img} alt={t(`aluminumWindows.models.${model.id}.name`)} loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }} />
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center gap-3 mb-3">

@@ -1,6 +1,6 @@
 {
   "common": {
-    "siteName": "ImzoMaster",
+    "siteName": "Imzo",
     "tagline": "Toshkentda plastik va alyumin oyna va eshiklar ishlab chiqarish va o'rnatish",
     "phone": "+998 99 888 57 37",
     "phoneRaw": "+998998885737",
@@ -22,14 +22,14 @@
   },
   "home": {
     "heroTitle": "Toshkentda ishlab chiqaruvchidan zamonaviy oyna va eshiklar",
-    "heroSubtitle": "ImzoMaster — Imzo zavodining rasmiy dileri. Avtomatlashtirilgan ishlab chiqarish, Yevropa sifati, qulay narxlar. O'zbekiston bozorida 10+ yil.",
+    "heroSubtitle": "Imzo — Imzo zavodining rasmiy dileri. Avtomatlashtirilgan ishlab chiqarish, Yevropa sifati, qulay narxlar. O'zbekiston bozorida 10+ yil.",
     "heroCta1": "Mahsulotlarimiz",
     "heroCta2": "Bepul konsultatsiya",
     "statYears": "10+ yil",
     "statYearsLabel": "Bozorda",
     "statUnits": "2 500",
     "statUnitsLabel": "Smenada mahsulot",
-    "statModels": "12+",
+    "statModels": "14+",
     "statModelsLabel": "Oyna modeli",
     "statAuto": "100%",
     "statAutoLabel": "Avtomatlashtirish",
@@ -64,7 +64,7 @@
     ]
   },
   "products": {
-    "title": "ImzoMaster mahsulotlari",
+    "title": "Imzo mahsulotlari",
     "subtitle": "Plastik va alyumin oynalar, shuningdek, kafe va restoranlar uchun maxsus tizimlar",
     "models": "Modellar",
     "details": "Barcha modellarni ko'rish",
@@ -72,14 +72,14 @@
       "pvc": {
         "title": "Plastik oynalar (PVX)",
         "subtitle": "Energiyani tejovchi va uzoq muddatli",
-        "description": "Yuqori sifat, issiqlik va ovoz izolyatsiyasi. Ekonomdan premiumgacha 4 ta model.",
-        "models": "Trio 60, Quattro 60, Engelberg 70, Engelberg 80"
+        "description": "Yuqori sifat, issiqlik va ovoz izolyatsiyasi. Ekonomdan premiumgacha 6 ta model.",
+        "models": "Rehau ArtEvo, Rehau Euro-Design 70, Trio 60, Quattro 60, Engelberg 70, Engelberg 80"
       },
       "aluminum": {
         "title": "Alyumin oynalar",
         "subtitle": "Mustahkamlik, uslub, energiya samaradorligi",
-        "description": "Panoram oynalash, fasadlar va zamonaviy interyerlar uchun.",
-        "models": "Thermo 57, Thermo 65, Thermo 78, Thermo 98"
+        "description": "Panoram oynalash, fasadlar va zamonaviy interyerlar uchun 8 ta model.",
+        "models": "Thermo 57, 64, 65, 78, 85, 98, 105 Engelberg, Champion"
       },
       "cafe": {
         "title": "Kafe va restoranlar uchun",
@@ -95,6 +95,28 @@
     "description": "IMZO plastik oynalari — bu sifat, qulaylik va chidamlilik uyg'unligi. Ular yilning istalgan vaqtida issiqlik, tinchlik va shinamlikni ta'minlaydi, isitish xarajatlarini kamaytirishga yordam beradi. Namlik, quyosh va harorat o'zgarishiga chidamli, bo'yash va murakkab parvarish talab qilmaydi. Kvartiralar, shahar tashqarisidagi uylar, ofislar, bolalar bog'chalari va maktablar uchun ideal.",
     "specs": "Xususiyatlari",
     "models": {
+      "rehauArtevo": {
+        "name": "Rehau ArtEvo",
+        "tagline": "Premium Yevropa profili",
+        "description": "Rehau ArtEvo oynalari yuqori issiqlik va shovqin izolyatsiyasini ta'minlab, zamonaviy dizaynni ishonchlilik bilan uyg'unlashtiradi. Termal qo'shimchali ko'p qatlamli profil va mustahkamlangan ramka tufayli turar-joy va tijorat binolari uchun mos.",
+        "features": [
+          "Premium Rehau profili",
+          "Yuqori issiqlik va shovqin izolyatsiyasi",
+          "80 mm o'rnatish chuqurligi",
+          "Energiya samaradorligi"
+        ]
+      },
+      "rehauED70": {
+        "name": "Rehau Euro-Design 70",
+        "tagline": "Ishonchli iqtisodiy yechim",
+        "description": "Rehau Euro-Design 70 — 70 mm o'rnatish chuqurligi va besh kamerali profilga ega ishonchli va iqtisodiy yechim. Mukammal issiqlik va shovqin izolyatsiyasini kafolatlab, turli me'moriy uslublar uchun mos keladi.",
+        "features": [
+          "Besh kamerali Rehau profili",
+          "70 mm o'rnatish chuqurligi",
+          "Ob-havoga chidamli",
+          "Parvarish qilish oson"
+        ]
+      },
       "trio60": {
         "name": "Trio 60",
         "tagline": "Iqtisodiy yechim",
@@ -109,7 +131,8 @@
           "maxSashWidth": "Maks. tavak kengligi",
           "glassThickness": "Shisha paket qalinligi",
           "profileSeries": "Profil seriyasi",
-          "maxSashWeight": "Maks. tavak og'irligi"
+          "maxSashWeight": "Maks. tavak og'irligi",
+          "thermalInsulation": "Issiqlik izolyatsiyasi"
         },
         "features": [
           "Qulay narx",
@@ -218,6 +241,50 @@
           "Premium konstruksiya",
           "Passiv uylar uchun"
         ]
+      },
+      "thermo64": {
+        "name": "Thermo 64 Engelberg",
+        "tagline": "Issiq seriya",
+        "description": "Turar-joy va tijorat binolari uchun issiqlik izolyatsiyali 64 mm chuqurlikdagi alyumin profil. Markaziy Osiyo iqlimi sharoitlari hisobga olinib yaratilgan.",
+        "features": [
+          "Issiq alyumin seriya",
+          "Turli qoplama variantlari",
+          "Ob-havoga chidamli",
+          "Zamonaviy dizayn"
+        ]
+      },
+      "thermo85": {
+        "name": "Thermo 85 Engelberg",
+        "tagline": "Yuqori issiqlik izolyatsiyasi",
+        "description": "Zamonaviy me'morchilik binolari uchun qulay yechim. Yuqori sifatli qo'shoynalar uyni tashqi shovqin va issiqlik yo'qotilishidan himoya qiladi. Alyumin asosli — deformatsiyaga uchramaydi, uzoq xizmat qiladi.",
+        "features": [
+          "85 mm chuqurlikdagi profil",
+          "Yuqori issiqlik va shovqin izolyatsiyasi",
+          "Ekologik toza materiallar",
+          "Markaziy Osiyo iqlimi uchun"
+        ]
+      },
+      "thermo105": {
+        "name": "Thermo 105 Engelberg",
+        "tagline": "Maksimal flagman",
+        "description": "105 mm chuqurlik va 54 mm termo-ko'prikka ega eng yuqori darajadagi alyumin profil. EN 12600, EN 14019 va EN 13049 Yevropa standartlariga javob beradi.",
+        "features": [
+          "105 mm tavak chuqurligi",
+          "54 mm termo-ko'prik",
+          "Yevropa standartlari (EN)",
+          "Maks. balandlik 3000 mm"
+        ]
+      },
+      "champion": {
+        "name": "Champion",
+        "tagline": "Sovuq oynalash",
+        "description": "Balkon va lodjiyalarni sovuq oynalash hamda issiqlik izolyatsiyasiga yuqori talab bo'lmagan binolar uchun alyumin tizim. Ma'muriy va jamoat binolari uchun kirish eshiklari, do'kon oynalari ham ishlab chiqariladi.",
+        "features": [
+          "Sovuq oynalash",
+          "Balkon va lodjiyalar uchun",
+          "Yengil alyumin profil",
+          "Iqtisodiy yechim"
+        ]
       }
     }
   },
@@ -287,19 +354,20 @@
   "about": {
     "title": "Biz haqimizda",
     "subtitle": "Imzo zavodining rasmiy dileri — O'zbekistondagi yetakchi oyna va eshik tizimlari ishlab chiqaruvchilardan biri",
-    "aboutTitle": "ImzoMaster kompaniyasi haqida",
+    "aboutTitle": "Imzo kompaniyasi haqida",
     "description": "Imzo 10 yildan ortiq vaqtdan beri O'zbekiston PVX mahsulotlari bozorida yetakchi mavqega ega. Brend mahsulotlari ishonchliligi va chidamliligi bilan mashhur bo'lib, minglab mamnun mijozlar tomonidan tasdiqlangan.",
     "contactUs": "Biz bilan bog'laning",
-    "listTitle": "ImzoMaster — bu:",
+    "listTitle": "Imzo — bu:",
     "list": [
       "Imzo zavodining rasmiy dileri",
-      "O'zbekiston bozorida 10+ yil",
+      "O'zbekiston bo'ylab 70+ shourum va 7 franshiza",
+      "Markaziy Osiyodagi yagona zamonaviy deraza fabrikasi",
       "Minglab mamnun mijozlar",
       "Ishlab chiqaruvchidan to'g'ridan-to'g'ri kafolat",
       "Kalit topshirish xizmatlar to'liq sikli"
     ],
     "factoryTitle": "Avtomatlashtirilgan ishlab chiqarish",
-    "factoryDesc": "Imzo fabrikasi ishlab chiqarishi to'liq avtomatlashtirilgan va maxsus dasturiy ta'minotli kompyuter tizimi tomonidan boshqariladi. Zavod konveyer tizimida ishlaydi — tayyorlashning barcha bosqichlari (kesish, payvandlash, yig'ish) kompyuter tomonidan nazorat qilinadi, bu aniqlik, samaradorlik va yuqori unumdorlikni kafolatlaydi.",
+    "factoryDesc": "Imzo fabrikasi 160 000 m² hududda joylashgan bo'lib, ishlab chiqarish maydoni 70 000 m² ni tashkil etadi — bu nafaqat O'zbekistonda, balki butun Markaziy Osiyoda shu darajadagi yagona deraza fabrikasidir. Ishlab chiqarish to'liq avtomatlashtirilgan va maxsus dasturiy ta'minotli kompyuter tizimi tomonidan boshqariladi: barcha bosqichlar (kesish, payvandlash, yig'ish) kompyuter nazoratida, bu aniqlik va yuqori unumdorlikni kafolatlaydi.",
     "factoryFeatures": [
       "To'liq avtomatlashtirilgan liniya",
       "Barcha bosqichlarda kompyuter nazorati",
@@ -310,7 +378,7 @@
     "factoryUnits": "smenada tayyor mahsulot",
     "factory100": "100% avtomatlashtirish",
     "advantagesTitle": "Bizning afzalliklarimiz",
-    "advantagesSubtitle": "Nega mijozlar ImzoMaster ni tanlashadi",
+    "advantagesSubtitle": "Nega mijozlar Imzo ni tanlashadi",
     "advantages": [
       { "title": "Rasmiy kafolat", "description": "Barcha mahsulotlarga Imzo zavodidan to'g'ridan-to'g'ri kafolat" },
       { "title": "Qulay narxlar", "description": "Vositachilarsiz ishlaymiz, moslashuvchan chegirma va aksiyalar tizimi" },
@@ -357,24 +425,14 @@
   },
   "privacy": {
     "title": "Maxfiylik siyosati",
-    "text": "1. Umumiy qoidalar\n\nUshbu shaxsiy ma'lumotlarni qayta ishlash siyosati O'zbekiston Respublikasi qonunchiligi talablariga muvofiq tuzilgan va ImzoMaster tomonidan shaxsiy ma'lumotlarni qayta ishlash tartibi va shaxsiy ma'lumotlar xavfsizligini ta'minlash choralarini belgilaydi.\n\n2. Ma'lumotlarni yig'ish va ishlatish\n\nBiz faqat saytdagi qayta aloqa formasi orqali ixtiyoriy ravishda taqdim etilgan shaxsiy ma'lumotlarni yig'amiz: ism, telefon raqami, elektron pochta manzili.\n\n3. Shaxsiy ma'lumotlarni qayta ishlash maqsadlari\n\n- Mijozlarning so'rovlari va murojaatlarini qayta ishlash\n- Buyurtma tafsilotlarini aniqlashtirish uchun mijoz bilan bog'lanish\n- Kompaniya mahsulotlari va xizmatlari haqida ma'lumot berish\n\n4. Ma'lumotlarni uchinchi shaxslarga berish\n\nQonunchilikda nazarda tutilgan holatlar bundan mustasno, biz sizning shaxsiy ma'lumotlaringizni roziligingizsiz uchinchi shaxslarga bermaymiz.\n\n5. Axborot himoyasi\n\nBiz shaxsiy ma'lumotlaringizni ruxsatsiz kirish, o'zgartirish, oshkor qilish yoki yo'q qilishdan himoya qilish uchun zarur tashkiliy va texnik choralarni ko'ramiz.\n\n6. Aloqa ma'lumotlari\n\nShaxsiy ma'lumotlarni qayta ishlash bo'yicha barcha savollar bo'yicha biz bilan bog'lanishingiz mumkin:\n- Telefon: +998 99 888 57 37\n- Email: info@imzo-evolution.uz\n- Manzil: Toshkent sh., Yunusobod tumani"
+    "text": "1. Umumiy qoidalar\n\nUshbu shaxsiy ma'lumotlarni qayta ishlash siyosati O'zbekiston Respublikasi qonunchiligi talablariga muvofiq tuzilgan va Imzo tomonidan shaxsiy ma'lumotlarni qayta ishlash tartibi va shaxsiy ma'lumotlar xavfsizligini ta'minlash choralarini belgilaydi.\n\n2. Ma'lumotlarni yig'ish va ishlatish\n\nBiz faqat saytdagi qayta aloqa formasi orqali ixtiyoriy ravishda taqdim etilgan shaxsiy ma'lumotlarni yig'amiz: ism, telefon raqami, elektron pochta manzili.\n\n3. Shaxsiy ma'lumotlarni qayta ishlash maqsadlari\n\n- Mijozlarning so'rovlari va murojaatlarini qayta ishlash\n- Buyurtma tafsilotlarini aniqlashtirish uchun mijoz bilan bog'lanish\n- Kompaniya mahsulotlari va xizmatlari haqida ma'lumot berish\n\n4. Ma'lumotlarni uchinchi shaxslarga berish\n\nQonunchilikda nazarda tutilgan holatlar bundan mustasno, biz sizning shaxsiy ma'lumotlaringizni roziligingizsiz uchinchi shaxslarga bermaymiz.\n\n5. Axborot himoyasi\n\nBiz shaxsiy ma'lumotlaringizni ruxsatsiz kirish, o'zgartirish, oshkor qilish yoki yo'q qilishdan himoya qilish uchun zarur tashkiliy va texnik choralarni ko'ramiz.\n\n6. Aloqa ma'lumotlari\n\nShaxsiy ma'lumotlarni qayta ishlash bo'yicha barcha savollar bo'yicha biz bilan bog'lanishingiz mumkin:\n- Telefon: +998 99 888 57 37\n- Email: info@imzo-evolution.uz\n- Manzil: Toshkent sh., Yunusobod tumani"
   },
   "officeMap": {
     "title": "Ofislarimiz xaritada",
     "subtitle": "Toshkentdagi ofisimizga tashrif buyuring",
     "directions": "Yo'nalish olish",
     "offices": [
-      { "name": "ImzoMaster — Yunusobod tumani", "address": "Toshkent sh., Yunusobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Mirzo Ulug'bek tumani", "address": "Toshkent sh., Mirzo Ulug'bek tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Olmazor tumani", "address": "Toshkent sh., Olmazor tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Shayxontohur tumani", "address": "Toshkent sh., Shayxontohur tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Sergeli tumani", "address": "Toshkent sh., Sergeli tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Chilonzor tumani", "address": "Toshkent sh., Chilonzor tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Uchtepa tumani", "address": "Toshkent sh., Uchtepa tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Yakkasaroy tumani", "address": "Toshkent sh., Yakkasaroy tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Mirobod tumani", "address": "Toshkent sh., Mirobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Yashnobod tumani", "address": "Toshkent sh., Yashnobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" },
-      { "name": "ImzoMaster — Bektemir tumani", "address": "Toshkent sh., Bektemir tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" }
+      { "name": "Imzo — Yunusobod tumani", "address": "Toshkent sh., Yunusobod tumani", "phone": "+998 99 888 57 37", "workTime": "Dush–Shan: 9:00 – 18:00" }
     ]
   },
   "notFound": {

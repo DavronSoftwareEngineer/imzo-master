@@ -12,9 +12,12 @@ i18n
       uz: { translation: uz },
       ru: { translation: ru },
     },
-    fallbackLng: 'ru',
+    supportedLngs: ['uz', 'ru'],
+    fallbackLng: 'uz',
+    // Sukut bo'yicha o'zbekcha: birinchi tashrifda (localStorage bo'sh) doim uz.
+    // Foydalanuvchi tilni o'zgartirsa — tanlovi localStorage'da saqlanadi.
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['localStorage'],
       caches: ['localStorage'],
     },
     interpolation: {

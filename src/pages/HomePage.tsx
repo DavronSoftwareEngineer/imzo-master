@@ -25,9 +25,9 @@ export default function HomePage() {
   ];
 
   const categories = [
-    { link: '/plastic-windows', emoji: '🪟', key: 'pvc', gradient: 'from-blue-500 to-cyan-600' },
-    { link: '/aluminum-windows', emoji: '🏢', key: 'aluminum', gradient: 'from-slate-600 to-slate-800' },
-    { link: '/for-cafes', emoji: '🏠', key: 'cafe', gradient: 'from-amber-500 to-orange-600' },
+    { link: '/plastic-windows', img: 'products/rehau-artevo.png', key: 'pvc', gradient: 'from-blue-500 to-cyan-600' },
+    { link: '/aluminum-windows', img: 'products/thermo65.png', key: 'aluminum', gradient: 'from-slate-600 to-slate-800' },
+    { link: '/for-cafes', img: 'products/bioclimatic.jpg', key: 'cafe', gradient: 'from-amber-500 to-orange-600' },
   ];
 
   const factoryFacts = t('home.factoryFacts', { returnObjects: true }) as unknown as string[];
@@ -128,9 +128,9 @@ export default function HomePage() {
           <div className="grid-3" style={{ marginTop: 40 }}>
             {categories.map((cat) => (
               <Link key={cat.link} to={cat.link} className="card">
-                <div className={`h-48 bg-gradient-to-br ${cat.gradient} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/10" />
-                  <span className="relative text-6xl">{cat.emoji}</span>
+                <div className={`h-48 bg-gradient-to-br ${cat.gradient} relative overflow-hidden`}>
+                  <img src={import.meta.env.BASE_URL + cat.img} alt={t(`products.categories.${cat.key}.title`)} loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }} />
+                  <div className="absolute inset-0 bg-black/15" />
                 </div>
                 <div className="card-body">
                   <h3>{t(`products.categories.${cat.key}.title`)}</h3>
