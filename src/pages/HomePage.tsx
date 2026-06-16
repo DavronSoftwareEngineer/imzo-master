@@ -6,6 +6,10 @@ import type { IconType } from 'react-icons';
 import { lazy, Suspense, useState, useEffect, type FormEvent } from 'react';
 import Seo from '../components/ui/Seo';
 import ProductSlider from '../components/ui/ProductSlider';
+import ImageFader from '../components/ui/ImageFader';
+
+// Stat karta foni uchun chiroyli real foto-rasmlar (kesilganda ham yaxshi ko'rinadi).
+const MODEL_IMGS = ['categories/alyumin.jpg', 'categories/surilma.jpg', 'categories/oynali.jpg', 'categories/import.jpg', 'portfolio/p3.jpg'];
 import { sendLeadToTelegram, isTelegramConfigured } from '../lib/telegram';
 const OfficeMapSection = lazy(() => import('../components/map/OfficeMapSection'));
 
@@ -75,7 +79,7 @@ export default function HomePage() {
   const stats = [
     { icon: '🏆', value: t('home.statYears'), label: t('home.statYearsLabel') },
     { icon: '⚙️', value: t('home.statUnits'), label: t('home.statUnitsLabel') },
-    { icon: '🪟', value: t('home.statModels'), label: t('home.statModelsLabel') },
+    { icon: '🪟', value: t('home.statModels'), label: t('home.statModelsLabel'), id: 'models' },
     { icon: '🤖', value: t('home.statAuto'), label: t('home.statAutoLabel') },
   ];
 
@@ -196,8 +200,15 @@ export default function HomePage() {
           {/* Stats strip */}
           <div className="stats-grid">
             {stats.map((s) => (
-              <div key={s.label} className="stat-card bg-white/5 border border-white/10">
-                <div className="stat-icon">{s.icon}</div>
+              <div key={s.label} className={`stat-card bg-white/5 border border-white/10${s.id === 'models' ? ' stat-card-img' : ''}`}>
+                {s.id === 'models' ? (
+                  <>
+                    <ImageFader images={MODEL_IMGS} className="stat-bg" interval={3000} />
+                    <div className="stat-bg-overlay" />
+                  </>
+                ) : (
+                  <div className="stat-icon">{s.icon}</div>
+                )}
                 <div className="stat-value text-white">{s.value}</div>
                 <div className="stat-label text-white/60">{s.label}</div>
               </div>

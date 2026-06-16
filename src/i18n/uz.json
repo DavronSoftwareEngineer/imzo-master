@@ -144,6 +144,18 @@
     "subtitle": "Plastik va alyumin oynalar, shuningdek, kafe va restoranlar uchun maxsus tizimlar",
     "models": "Modellar",
     "details": "Barcha modellarni ko'rish",
+    "inquire": "So'rov yuborish",
+    "catalog": [
+      { "title": "Plastik romlar", "items": ["Rehau ArtEvo", "Rehau Euro-Design 70", "Trio 60", "Quattro 60", "Engelberg 70", "Engelberg 80"] },
+      { "title": "Alyumin romlar", "items": ["Thermo 57", "Thermo 64", "Thermo 65", "Thermo 78", "Thermo 85", "Thermo 98", "Thermo 105", "Champion"] },
+      { "title": "Eshiklar", "items": ["MDF 40", "Invisible Door"] },
+      { "title": "Surilma tizimlari", "items": ["BKH 20", "BKH 65"] },
+      { "title": "Import tizimlari", "items": ["Slide Master", "Tiara Twinmax", "Gilyotina tizimi", "Pergola", "Bioklimatik pergola"] },
+      { "title": "Fasad tizimlari", "items": ["BKF 48", "BKF 50"] },
+      { "title": "Rollet tizimlari", "items": ["Rolikli panjaralar", "Seksiyali darvozalar"] },
+      { "title": "Aksessuarlar", "items": ["Hasharotlardan himoyalovchi to'r", "Deraza tokchalari", "Rom va eshik tutqichlari"] },
+      { "title": "Oynali to'siqlar", "items": ["BKO 40", "BKGF-90"] }
+    ],
     "categories": {
       "pvc": {
         "title": "Plastik oynalar (PVX)",

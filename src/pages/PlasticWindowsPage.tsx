@@ -3,6 +3,7 @@ import { HiPhone } from 'react-icons/hi';
 import { FaTelegramPlane } from 'react-icons/fa';
 import PageHero from '../components/ui/PageHero';
 import Seo from '../components/ui/Seo';
+import FitImage from '../components/ui/FitImage';
 
 export default function PlasticWindowsPage() {
   const { t } = useTranslation();
@@ -71,7 +72,7 @@ export default function PlasticWindowsPage() {
             <div className="contain">
               <div className="grid-2" style={{ alignItems:'start' }}>
                 <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${model.gradient} relative`} style={{ height: 'clamp(220px, 42vw, 380px)' }}>
-                  <img src={import.meta.env.BASE_URL + model.img} alt={t(`plasticWindows.models.${model.id}.name`)} loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }} />
+                  <FitImage src={import.meta.env.BASE_URL + model.img} alt={t(`plasticWindows.models.${model.id}.name`)} />
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center gap-3 mb-3">

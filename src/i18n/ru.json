@@ -144,6 +144,18 @@
     "subtitle": "Пластиковые и алюминиевые окна, а также специальные системы для кафе и ресторанов",
     "models": "Модели",
     "details": "Смотреть все модели",
+    "inquire": "Отправить запрос",
+    "catalog": [
+      { "title": "Пластиковые окна", "items": ["Rehau ArtEvo", "Rehau Euro-Design 70", "Trio 60", "Quattro 60", "Engelberg 70", "Engelberg 80"] },
+      { "title": "Алюминиевые окна", "items": ["Thermo 57", "Thermo 64", "Thermo 65", "Thermo 78", "Thermo 85", "Thermo 98", "Thermo 105", "Champion"] },
+      { "title": "Двери", "items": ["MDF 40", "Invisible Door"] },
+      { "title": "Раздвижные системы", "items": ["BKH 20", "BKH 65"] },
+      { "title": "Импортные системы", "items": ["Slide Master", "Tiara Twinmax", "Гильотинная система", "Пергола", "Биоклиматическая пергола"] },
+      { "title": "Фасадные системы", "items": ["BKF 48", "BKF 50"] },
+      { "title": "Роллетные системы", "items": ["Рольставни", "Секционные ворота"] },
+      { "title": "Аксессуары", "items": ["Москитные сетки", "Подоконники", "Ручки для окон и дверей"] },
+      { "title": "Стеклянные ограждения", "items": ["BKO 40", "BKGF-90"] }
+    ],
     "categories": {
       "pvc": {
         "title": "Пластиковые окна (ПВХ)",

@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { HiChevronLeft, HiChevronRight, HiArrowRight } from 'react-icons/hi';
+import FitImage from './FitImage';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -44,7 +45,7 @@ export default function ProductSlider() {
           {CATS.map((c, i) => (
             <Link key={i} to={c.link} className="pslide">
               <div className="pslide-img">
-                <img src={BASE + c.img} alt={Array.isArray(labels) ? labels[i] : ''} loading="lazy" />
+                <FitImage src={BASE + c.img} alt={Array.isArray(labels) ? labels[i] : ''} />
               </div>
               <div className="pslide-label">{Array.isArray(labels) ? labels[i] : ''}</div>
             </Link>

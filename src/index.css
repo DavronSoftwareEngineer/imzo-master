@@ -633,7 +633,7 @@ p { margin: 0; }
 .portfolio-card { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 3; box-shadow: 0 8px 24px var(--shadow); }
 .portfolio-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .portfolio-card:hover img { transform: scale(1.06); }
-.portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,16,28,0.88) 0%, rgba(10,16,28,0.15) 55%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; }
+.portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,16,28,0.82) 0%, rgba(10,16,28,0.0) 50%); display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; }
 .portfolio-overlay .pf-name { color: #fff; font-weight: 800; font-size: 18px; line-height: 1.2; }
 .portfolio-overlay .pf-type { color: rgba(255,255,255,0.78); font-size: 13px; margin-top: 2px; }
 
@@ -684,13 +684,28 @@ p { margin: 0; }
 .callback-note { font-size: 13px; color: var(--text-muted2); margin-top: 12px; }
 @media (max-width: 768px) { .callback-band { grid-template-columns: 1fr; } }
 
+/* FitImage — rasmni kesmasdan to'liq ko'rsatadi (blur-fill orqa fon) */
+.fit-img { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; }
+.fit-img-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(22px) brightness(0.82); transform: scale(1.18); }
+.fit-img-fg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+
+/* Stat card with full image slider background (real model photos) */
+.stat-card-img { position: relative; overflow: hidden; }
+.stat-bg { position: absolute; inset: 0; z-index: 0; }
+.stat-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .9s ease; }
+.stat-bg img.active { opacity: 1; }
+.stat-bg-overlay { position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse at center, rgba(11,18,32,0.42) 0%, rgba(11,18,32,0.68) 100%); }
+.stat-card-img .stat-value, .stat-card-img .stat-label { position: relative; z-index: 2; text-shadow: 0 2px 10px rgba(0,0,0,0.7); }
+.stat-card-img .stat-bg img { transform: scale(1.04); transition: opacity .9s ease, transform 6s ease; }
+.stat-card-img .stat-bg img.active { transform: scale(1.12); }
+
 /* Product category slider */
 .pslider-track { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; -ms-overflow-style: none; scrollbar-width: none; }
 .pslider-track::-webkit-scrollbar { display: none; }
-.pslide { flex: 0 0 auto; width: clamp(200px, 22vw, 250px); scroll-snap-align: start; text-decoration: none; }
-.pslide-img { border-radius: 18px; overflow: hidden; aspect-ratio: 3 / 4; box-shadow: 0 8px 24px var(--shadow); }
-.pslide-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
-.pslide:hover .pslide-img img { transform: scale(1.06); }
+.pslide { flex: 0 0 auto; width: clamp(230px, 25vw, 300px); scroll-snap-align: start; text-decoration: none; }
+.pslide-img { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3 / 4; box-shadow: 0 8px 24px var(--shadow); }
+.pslide-img .fit-img-fg { transition: transform .5s ease; }
+.pslide:hover .pslide-img .fit-img-fg { transform: scale(1.06); }
 .pslide-label { margin-top: 12px; font-weight: 800; color: var(--text-heading); font-size: 16px; }
 .pslider-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 26px; gap: 16px; flex-wrap: wrap; }
 .pslider-arrows { display: flex; gap: 10px; }
