@@ -10,8 +10,8 @@ export default function PlasticWindowsPage() {
   const sl = (key: string) => t(`plasticWindows.models.trio60.specs.${key}`);
 
   const models = [
-    { id: 'rehauArtevo', img: 'products/rehau-artevo.png', gradient: 'from-amber-400 to-amber-600' },
-    { id: 'rehauED70', img: 'products/rehau-ed70.png', gradient: 'from-orange-400 to-orange-600' },
+    { id: 'rehauArtevo', img: 'products/rehau-artevo.webp', gradient: 'from-amber-400 to-amber-600' },
+    { id: 'rehauED70', img: 'products/rehau-ed70.webp', gradient: 'from-orange-400 to-orange-600' },
     { id: 'trio60', img: 'products/trio60.png', gradient: 'from-blue-400 to-blue-600' },
     { id: 'quattro60', img: 'products/quattro60.png', gradient: 'from-cyan-400 to-cyan-600' },
     { id: 'engelberg70', img: 'products/engelberg70.png', gradient: 'from-indigo-400 to-indigo-600' },
