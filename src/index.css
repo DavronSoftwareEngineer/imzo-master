@@ -696,7 +696,7 @@ p { margin: 0; }
 .fit-img-fg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 
 /* Stat card with full image slider background (real model photos) */
-.stat-card-img { position: relative; overflow: hidden; }
+.stat-card-img { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .stat-bg { position: absolute; inset: 0; z-index: 0; }
 .stat-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .9s ease; }
 .stat-bg img.active { opacity: 1; }

@@ -188,13 +188,6 @@ export default function HomePage() {
               <Link to="/products" className="btn btn-primary"><HiArrowRight />{t('home.heroCta1')}</Link>
               <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-outline"><HiPhone />{t('common.phone')}</a>
             </div>
-            {slideCount > 1 && (
-              <div className="hero-dots">
-                {heroSlides.map((_, i) => (
-                  <button key={i} className={`hero-dot${i === slide ? ' active' : ''}`} onClick={() => setSlide(i)} aria-label={`Slayd ${i + 1}`} />
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Stats strip */}
