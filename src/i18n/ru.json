@@ -116,7 +116,7 @@
       { "name": "Сардор М.", "role": "Владелец ресторана", "text": "На террасу установили гильотинную систему — клиентам очень понравилось. Профессиональная команда, однозначно рекомендую.", "rating": 5 }
     ],
     "partnersTitle": "Нам доверяют",
-    "partners": ["Agrobank", "Hilton", "Nest One", "Akfa", "Akay City", "Jetour"],
+    "partners": ["Agrobank", "Hilton", "Hampton", "Nest One", "Akfa", "Akay City", "Boulevard", "Jetour"],
     "warranty": [
       { "icon": "shield", "title": "Гарантия 5 лет", "desc": "Официальная гарантия на каждое изделие" },
       { "icon": "badge", "title": "Сертификат ISO 9001", "desc": "Международный стандарт качества" },

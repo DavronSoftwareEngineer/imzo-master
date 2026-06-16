@@ -645,10 +645,16 @@ p { margin: 0; }
 .review-name { font-weight: 700; color: var(--text-heading); }
 .review-role { font-size: 13px; color: var(--text-muted2); }
 
-/* Partners strip */
-.partners-strip { display: flex; flex-wrap: wrap; gap: clamp(20px, 5vw, 56px); align-items: center; justify-content: center; margin-top: 28px; }
-.partner-logo { font-size: clamp(18px, 3vw, 26px); font-weight: 800; color: var(--text-muted2); letter-spacing: 0.5px; opacity: .7; transition: opacity .3s, color .3s; }
+/* Partners marquee (auto-scroll) */
+.marquee { overflow: hidden; width: 100%; margin-top: 28px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; align-items: center; gap: clamp(28px, 5vw, 64px); width: max-content; animation: marquee 28s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.partner-logo { font-size: clamp(18px, 3vw, 26px); font-weight: 800; color: var(--text-muted2); letter-spacing: 0.5px; opacity: .7; white-space: nowrap; transition: opacity .3s, color .3s; }
 .partner-logo:hover { opacity: 1; color: var(--text-heading); }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
+}
 
 /* Floating quick-contact (WhatsApp / Telegram / Call) */
 .fab-stack { position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; flex-direction: column; gap: 12px; }

@@ -116,7 +116,7 @@
       { "name": "Sardor M.", "role": "Restoran egasi", "text": "Terrasamizga gilyotin tizimi o'rnatildi — mijozlarga juda yoqdi. Professional jamoa, albatta tavsiya qilaman.", "rating": 5 }
     ],
     "partnersTitle": "Bizga ishonadilar",
-    "partners": ["Agrobank", "Hilton", "Nest One", "Akfa", "Akay City", "Jetour"],
+    "partners": ["Agrobank", "Hilton", "Hampton", "Nest One", "Akfa", "Akay City", "Boulevard", "Jetour"],
     "warranty": [
       { "icon": "shield", "title": "5 yil kafolat", "desc": "Har bir mahsulotga rasmiy kafolat" },
       { "icon": "badge", "title": "ISO 9001 sertifikati", "desc": "Xalqaro sifat standarti" },

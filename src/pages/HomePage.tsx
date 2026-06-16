@@ -284,10 +284,12 @@ export default function HomePage() {
           <div className="section-header" style={{ marginTop: 56, marginBottom: 0 }}>
             <p style={{ fontWeight:600, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:1, fontSize:13 }}>{t('home.partnersTitle')}</p>
           </div>
-          <div className="partners-strip">
-            {Array.isArray(partners) && partners.map((p) => (
-              <span key={p} className="partner-logo">{p}</span>
-            ))}
+          <div className="marquee">
+            <div className="marquee-track">
+              {Array.isArray(partners) && [...partners, ...partners].map((p, i) => (
+                <span key={i} className="partner-logo">{p}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
