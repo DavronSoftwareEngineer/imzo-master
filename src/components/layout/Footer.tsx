@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <div className="footer-brand">
               <div className="footer-brand-icon">IM</div>
-              <div className="footer-brand-name">Imzo<span>Master</span></div>
+              <div className="footer-brand-name">Imzo<span>Toshkent</span></div>
             </div>
             <p style={{ color:'#94a3b8', fontSize:14, lineHeight:1.7, maxWidth:280, marginBottom:16 }}>{t('footer.description')}</p>
             <Link to="/privacy-policy" style={{ color:'#64748b', fontSize:12, textDecoration:'underline', textUnderlineOffset:4 }}>{t('nav.privacy')}</Link>

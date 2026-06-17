@@ -263,7 +263,7 @@ p { margin: 0; }
 /* ═══════════════════════════════════════
    STATS
    ═══════════════════════════════════════ */
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 720px; margin: 0 auto; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 20px; max-width: 720px; margin: 0 auto; }
 .stat-card { text-align: center; padding: 20px 16px; border-radius: 16px; }
 .stat-card .stat-icon { font-size: 24px; margin-bottom: 8px; }
 .stat-card .stat-value { font-size: 28px; font-weight: 800; line-height: 1.1; margin-bottom: 4px; }

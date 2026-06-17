@@ -60,7 +60,7 @@ export default function Header({ theme, onThemeToggle }: HeaderProps) {
         <Link to="/" className="header-logo">
           <img src={theme === 'dark' ? '/imzoLight.svg' : '/imzoDark.svg'} alt={t('common.siteName')} className="header-logo-img" />
           <div className="header-logo-text">
-            <div className="header-logo-brand">Imzo<span>Master</span></div>
+            <div className="header-logo-brand">Imzo<span>Toshkent</span></div>
             <span className="header-logo-sub">{t('common.shortAddress')}</span>
           </div>
         </Link>

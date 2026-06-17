@@ -21,29 +21,48 @@ const portfolioImgs = ['portfolio/p1.jpg', 'portfolio/p2.jpg', 'portfolio/p3.jpg
 function CallbackForm() {
   const { t } = useTranslation();
   const [phone, setPhone] = useState('');
-  const [done, setDone] = useState(false);
-  const submit = (e: FormEvent) => {
-    e.preventDefault();
-    if (!phone.trim()) return;
-    if (isTelegramConfigured()) {
-      sendLeadToTelegram({ name: t('home.callbackBtn'), phone }).catch(() => {});
-    } else {
-      const msg = `${t('home.callbackTitle')}: ${phone}`;
-      window.open(`${t('common.telegramUrl')}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
-    }
-    setDone(true);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'done'>('idle');
+
+  // Telegram'ga to'g'ridan-to'g'ri qo'lda yuborish uchun zaxira (bot sozlanmagan bo'lsa).
+  const openTelegram = () => {
+    const msg = `🔔 Qo'ng'iroq so'rovi\n📞 ${phone}`;
+    window.open(`${t('common.telegramUrl')}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
   };
-  if (done) return (
+
+  const submit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!phone.trim() || status === 'sending') return;
+    if (isTelegramConfigured()) {
+      // Bot sozlangan — to'g'ridan-to'g'ri admin Telegram'iga yuboriladi.
+      setStatus('sending');
+      try {
+        await sendLeadToTelegram({ name: "Qo'ng'iroq so'rovi (sayt)", phone });
+      } catch {
+        openTelegram(); // yuborib bo'lmasa — Telegram chatini ochamiz
+      }
+      setStatus('done');
+    } else {
+      // Bot sozlanmagan — Telegram chatini ochib, matnni tayyorlab beramiz.
+      openTelegram();
+      setStatus('done');
+    }
+  };
+
+  if (status === 'done') return (
     <div className="success-pop" style={{ textAlign: 'center' }}>
       <div className="success-check">&#10003;</div>
       <p style={{ color: 'var(--text-heading)', fontWeight: 700 }}>{t('home.callbackSuccess')}</p>
     </div>
   );
+
+  const sending = status === 'sending';
   return (
     <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t('home.callbackPhonePlaceholder')}
+      <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} disabled={sending} placeholder={t('home.callbackPhonePlaceholder')}
         style={{ width: '100%', padding: '14px 16px', border: '1px solid var(--border)', borderRadius: 12, fontSize: 15, outline: 'none', background: 'var(--surface)', color: 'var(--text)' }} />
-      <button type="submit" className="btn btn-primary" style={{ justifyContent: 'center' }}><HiPhone />{t('home.callbackBtn')}</button>
+      <button type="submit" className="btn btn-primary" disabled={sending} style={{ justifyContent: 'center', opacity: sending ? 0.7 : 1, cursor: sending ? 'wait' : 'pointer' }}>
+        <HiPhone />{sending ? t('contact.formSending') : t('home.callbackBtn')}
+      </button>
       <p className="callback-note" style={{ textAlign: 'center' }}>{t('home.callbackNote')}</p>
     </form>
   );
