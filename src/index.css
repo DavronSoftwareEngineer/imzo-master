@@ -693,7 +693,7 @@ p { margin: 0; }
 /* FitImage — rasmni kesmasdan to'liq ko'rsatadi (blur-fill orqa fon) */
 .fit-img { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; }
 .fit-img-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(22px) brightness(0.82); transform: scale(1.18); }
-.fit-img-fg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.fit-img-fg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; box-sizing: border-box; padding: 5%; }
 
 /* Stat card with full image slider background (real model photos) */
 .stat-card-img { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
