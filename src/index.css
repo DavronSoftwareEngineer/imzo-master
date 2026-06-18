@@ -186,6 +186,8 @@ p { margin: 0; }
   transition: all 0.3s ease;
 }
 .card:hover { box-shadow: 0 12px 40px var(--shadow); transform: translateY(-2px); }
+.card img { transition: transform 0.5s ease; }
+.card:hover img { transform: scale(1.05); }
 .card-body { padding: 24px; }
 .card-body h3 { font-size: 18px; font-weight: 700; color: var(--text-heading); margin-bottom: 6px; line-height: 1.2; }
 .card-body .subtitle { font-size: 13px; color: var(--text-muted2); font-weight: 500; margin-bottom: 10px; }
@@ -317,11 +319,14 @@ p { margin: 0; }
 .spec-table td:last-child { color: var(--spec-value); font-weight: 600; }
 .spec-table tr:nth-child(even) td { background: var(--spec-table-stripe); }
 .spec-table tr:nth-child(odd) td { background: var(--spec-table-cell); }
+.spec-table tr { transition: background 0.2s ease; }
+.spec-table tr:hover td { background: var(--accent-bg); }
 
 /* ═══════════════════════════════════════
    TAGS
    ═══════════════════════════════════════ */
-.tag { display: inline-flex; align-items: center; gap: 5px; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 500; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--tag-border); }
+.tag { display: inline-flex; align-items: center; gap: 5px; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 500; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--tag-border); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.tag:hover { transform: translateY(-1px); box-shadow: 0 3px 10px var(--shadow); }
 .tag svg { font-size: 13px; color: var(--feature-dot-color); }
 
 /* ═══════════════════════════════════════
@@ -640,7 +645,8 @@ p { margin: 0; }
 .portfolio-overlay .pf-type { color: rgba(255,255,255,0.78); font-size: 13px; margin-top: 2px; }
 
 /* Reviews */
-.review-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 18px; padding: 24px; box-shadow: 0 4px 16px var(--shadow); display: flex; flex-direction: column; gap: 12px; height: 100%; }
+.review-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 18px; padding: 24px; box-shadow: 0 4px 16px var(--shadow); display: flex; flex-direction: column; gap: 12px; height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.review-card:hover { transform: translateY(-3px); box-shadow: 0 14px 36px var(--shadow); }
 .review-stars { color: var(--accent); letter-spacing: 2px; font-size: 15px; }
 .review-text { color: var(--text-muted); line-height: 1.7; flex: 1; }
 .review-meta { display: flex; flex-direction: column; }
@@ -698,7 +704,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* Warranty / trust badges */
 .warranty-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
-.warranty-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; padding: 24px 16px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; }
+.warranty-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; padding: 24px 16px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.warranty-item:hover { transform: translateY(-3px); box-shadow: 0 12px 30px var(--shadow); border-color: var(--accent); }
 .warranty-icon { width: 54px; height: 54px; border-radius: 15px; display: flex; align-items: center; justify-content: center; background: var(--accent-bg); color: var(--accent-dark); font-size: 26px; }
 .warranty-item .w-title { font-weight: 800; color: var(--text-heading); font-size: 16px; }
 .warranty-item .w-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
