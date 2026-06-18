@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect -- raqam animatsiyasi rAF ichida setState ishlatadi (ataylab) */
 import { useEffect, useRef, useState } from 'react';
 
 // Raqamni 0 dan haqiqiy qiymatga animatsiya bilan sanaydi (ekranga kirganda).

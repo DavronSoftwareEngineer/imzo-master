@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { HiShieldCheck, HiTruck, HiCash, HiArrowRight, HiCheckCircle, HiPhone, HiClipboardCheck, HiCog, HiTruck as HiDelivery, HiHome, HiCreditCard, HiClipboardList, HiBadgeCheck, HiOfficeBuilding, HiChevronDown } from 'react-icons/hi';
+import { HiShieldCheck, HiTruck, HiCash, HiArrowRight, HiCheckCircle, HiPhone, HiClipboardCheck, HiCog, HiTruck as HiDelivery, HiHome, HiClipboardList, HiBadgeCheck, HiOfficeBuilding, HiChevronDown } from 'react-icons/hi';
 import { FaTelegramPlane } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 import { lazy, Suspense, useState, useEffect, type FormEvent } from 'react';
 import Seo from '../components/ui/Seo';
 import ProductSlider from '../components/ui/ProductSlider';
+import GallerySlider from '../components/ui/GallerySlider';
 import ImageFader from '../components/ui/ImageFader';
 import CountUp from '../components/ui/CountUp';
 
@@ -172,6 +173,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══ GALLERY SLIDER ═══ */}
+      <GallerySlider />
+
       {/* ═══ WARRANTY / TRUST BADGES ═══ */}
       <section className="section bg-surface">
         <div className="contain">
@@ -226,20 +230,6 @@ export default function HomePage() {
                 <div className="stat-label text-white/60">{s.label}</div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ INSTALLMENT BANNER ═══ */}
-      <section className="section bg-surface">
-        <div className="contain">
-          <div className="promo-band">
-            <div>
-              <div className="promo-eyebrow">{t('home.installmentCta')}</div>
-              <h2>{t('home.installmentTitle')}</h2>
-              <p>{t('home.installmentDesc')}</p>
-            </div>
-            <a href={`tel:${t('common.phoneRaw')}`} className="btn btn-primary" style={{ flexShrink:0 }}><HiCreditCard />{t('home.installmentCta')}</a>
           </div>
         </div>
       </section>
