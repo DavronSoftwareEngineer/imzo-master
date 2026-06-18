@@ -4,7 +4,6 @@ import { FaTelegramPlane } from 'react-icons/fa';
 import PageHero from '../components/ui/PageHero';
 import Seo from '../components/ui/Seo';
 
-const gradients = ['from-amber-500 to-orange-600', 'from-emerald-500 to-teal-600', 'from-sky-500 to-blue-600', 'from-rose-500 to-pink-600', 'from-purple-500 to-indigo-600'];
 const images = ['products/guillotine.jpg', 'products/pergola.jpg', 'products/champion.png', 'products/bioclimatic.jpg', 'products/bkh65.jpg'];
 
 export default function ForCafesPage() {
@@ -23,12 +22,13 @@ export default function ForCafesPage() {
 
       {systems.map((sysId, i) => {
         const features = t(`cafe.systems.${sysId}.features`, { returnObjects: true }) as unknown as string[];
+        const isRender = images[i].endsWith('.png'); // shaffof render (foto emas)
         return (
           <section key={sysId} className={`section${i % 2 === 0 ? ' bg-surface' : ' bg-white'}`}>
             <div className="contain">
               <div className="grid-2" style={{ alignItems:'start' }}>
-                <div className={`rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${gradients[i]} relative`} style={{ height: 'clamp(220px, 42vw, 380px)' }}>
-                  <img src={import.meta.env.BASE_URL + images[i]} alt={t(`cafe.systems.${sysId}.name`)} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div className="rounded-2xl overflow-hidden shadow-lg relative" style={{ height: 'clamp(220px, 42vw, 380px)', background: isRender ? 'radial-gradient(circle at 50% 40%, var(--surface-soft), var(--bg-soft))' : 'var(--surface-soft)' }}>
+                  <img src={import.meta.env.BASE_URL + images[i]} alt={t(`cafe.systems.${sysId}.name`)} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: isRender ? 'contain' : 'cover' }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize:'clamp(20px, 5vw, 24px)', fontWeight:800, color:'var(--text-heading)', marginBottom:16 }}>{t(`cafe.systems.${sysId}.name`)}</h2>

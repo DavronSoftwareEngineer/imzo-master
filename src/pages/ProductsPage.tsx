@@ -4,7 +4,6 @@ import { HiArrowRight, HiPhone } from 'react-icons/hi';
 import { FaTelegramPlane } from 'react-icons/fa';
 import PageHero from '../components/ui/PageHero';
 import Seo from '../components/ui/Seo';
-import FitImage from '../components/ui/FitImage';
 
 const BASE = import.meta.env.BASE_URL;
 // Katalog tartibida (i18n products.catalog bilan mos): rasm + havola.
@@ -37,8 +36,8 @@ export default function ProductsPage() {
               const hasPage = meta.link === '/plastic-windows' || meta.link === '/aluminum-windows';
               return (
                 <div key={cat.title} className="card" style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ position: 'relative', height: 'clamp(240px, 26vw, 300px)', overflow: 'hidden' }}>
-                    <FitImage src={BASE + meta.img} alt={cat.title} />
+                  <div style={{ position: 'relative', aspectRatio: '2 / 3', overflow: 'hidden' }}>
+                    <img src={BASE + meta.img} alt={cat.title} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
                   </div>
                   <div className="card-body" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <h3 style={{ marginBottom: 12 }}>{cat.title}</h3>

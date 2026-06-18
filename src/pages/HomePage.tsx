@@ -7,6 +7,7 @@ import { lazy, Suspense, useState, useEffect, type FormEvent } from 'react';
 import Seo from '../components/ui/Seo';
 import ProductSlider from '../components/ui/ProductSlider';
 import ImageFader from '../components/ui/ImageFader';
+import CountUp from '../components/ui/CountUp';
 
 // Stat karta foni uchun chiroyli real foto-rasmlar (kesilganda ham yaxshi ko'rinadi).
 const MODEL_IMGS = ['categories/alyumin.jpg', 'categories/surilma.jpg', 'categories/oynali.jpg', 'categories/import.jpg', 'portfolio/p3.jpg'];
@@ -221,7 +222,7 @@ export default function HomePage() {
                 ) : (
                   <div className="stat-icon">{s.icon}</div>
                 )}
-                <div className="stat-value text-white">{s.value}</div>
+                <div className="stat-value text-white"><CountUp value={s.value} /></div>
                 <div className="stat-label text-white/60">{s.label}</div>
               </div>
             ))}

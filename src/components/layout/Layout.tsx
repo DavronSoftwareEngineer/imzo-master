@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { HiPhone } from 'react-icons/hi';
+import { HiPhone, HiArrowUp } from 'react-icons/hi';
 import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
 import { useTheme } from '../../hooks/useTheme';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
@@ -13,6 +13,13 @@ export default function Layout() {
   const { theme, toggle } = useTheme();
 
   useScrollReveal();
+
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 500);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = i18n.language;
@@ -31,6 +38,15 @@ export default function Layout() {
         <a href={t('common.telegramUrl')} target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="fab fab-tg"><FaTelegramPlane /></a>
         <a href={`tel:${t('common.phoneRaw')}`} aria-label={t('common.phone')} className="fab fab-call"><HiPhone /></a>
       </div>
+      {/* Yuqoriga qaytish */}
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label={i18n.language === 'uz' ? 'Yuqoriga' : 'Наверх'}
+        className={`scroll-top${showTop ? ' show' : ''}`}
+      >
+        <HiArrowUp />
+      </button>
     </div>
   );
 }
