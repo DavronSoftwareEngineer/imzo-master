@@ -673,6 +673,34 @@ p { margin: 0; }
 .fab-call { background: var(--accent); color: #1a1300; animation: fabPulse 2.4s infinite; }
 @keyframes fabPulse { 0%, 100% { box-shadow: 0 8px 24px rgba(212,168,46,0.40); } 50% { box-shadow: 0 8px 32px rgba(212,168,46,0.75); } }
 
+/* Gallery (bajarilgan ishlar) — filtr + masonry + lightbox */
+.gallery-filters { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
+.gfilter { padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--card-bg); color: var(--text-muted); font-weight: 600; font-size: 14px; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.gfilter:hover { color: var(--text-heading); }
+.gfilter.active { background: var(--primary); color: var(--primary-text); border-color: var(--primary); }
+
+.gallery-grid { columns: 3 300px; column-gap: 16px; }
+.gallery-item { position: relative; width: 100%; margin: 0 0 16px; padding: 0; border: 0; background: none; border-radius: 14px; overflow: hidden; cursor: pointer; display: block; box-shadow: 0 6px 20px var(--shadow); break-inside: avoid; }
+.gallery-item img { width: 100%; display: block; animation: galFade .5s ease; transition: transform .45s ease; }
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-ov { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,16,28,0.35); color: #fff; font-size: 30px; opacity: 0; transition: opacity .3s ease; }
+.gallery-item:hover .gallery-ov { opacity: 1; }
+.gallery-cap { position: absolute; left: 10px; bottom: 10px; background: rgba(0,0,0,0.62); color: #fff; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+@keyframes galFade { from { opacity: 0; transform: scale(1.03); } to { opacity: 1; transform: none; } }
+
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; animation: lbFade .25s ease; }
+.lb-fig { margin: 0; cursor: default; max-width: 95%; }
+.lb-fig img { max-width: 100%; max-height: 86vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); display: block; margin: 0 auto; }
+.lb-fig figcaption { color: rgba(255,255,255,0.85); text-align: center; margin-top: 14px; font-size: 14px; font-weight: 500; }
+.lb-close, .lb-nav { position: absolute; z-index: 2; width: 46px; height: 46px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.12); color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s; }
+.lb-close:hover, .lb-nav:hover { background: rgba(255,255,255,0.28); }
+.lb-close { top: 20px; right: 20px; }
+.lb-nav { top: 50%; transform: translateY(-50%); }
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
+@keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 600px) { .lb-nav { width: 40px; height: 40px; } .lb-prev { left: 6px; } .lb-next { right: 6px; } }
+
 /* Scroll-to-top */
 .scroll-top { position: fixed; left: 20px; bottom: 20px; z-index: 50; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--border); background: var(--card-bg); color: var(--text-heading); font-size: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px var(--shadow); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .3s ease, transform .3s ease, background .2s, color .2s; }
 .scroll-top.show { opacity: 1; transform: none; pointer-events: auto; }

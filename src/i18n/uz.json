@@ -17,9 +17,16 @@
     "aluminumWindows": "Alyumin oynalar",
     "forCafes": "Kafe va restoranlar uchun",
     "calculator": "Kalkulyator",
+    "gallery": "Galereya",
     "about": "Biz haqimizda",
     "contact": "Kontaktlar",
     "privacy": "Maxfiylik siyosati"
+  },
+  "gallery": {
+    "title": "Bizning ishlarimiz",
+    "subtitle": "Mijozlar obyektlarida o'rnatgan oyna va eshiklarimiz",
+    "empty": "Tez orada bu yerda bajarilgan ishlarimiz fotolari paydo bo'ladi.",
+    "filters": { "all": "Hammasi", "residential": "Turar-joy", "commercial": "Tijorat", "interior": "Ichki ishlar" }
   },
   "calc": {
     "title": "Narx kalkulyatori",

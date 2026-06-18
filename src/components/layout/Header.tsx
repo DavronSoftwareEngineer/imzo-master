@@ -45,6 +45,7 @@ export default function Header({ theme, onThemeToggle }: HeaderProps) {
 
   const links: NavItem[] = [
     { label: t('nav.home'), path: '/' },
+    { label: t('nav.gallery'), path: '/gallery' },
     { label: t('nav.products'), path: '/products' },
     { label: t('nav.plasticWindows'), path: '/plastic-windows' },
     { label: t('nav.aluminumWindows'), path: '/aluminum-windows' },
