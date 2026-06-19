@@ -98,12 +98,8 @@
     ],
     "heroSlides": [
       { "eyebrow": "Bozorda 10+ yil", "title": "Toshkentda ishlab chiqaruvchidan zamonaviy oyna va eshiklar", "subtitle": "Imzo zavodi sifati, avtomatlashtirilgan ishlab chiqarish va qulay narxlar — barchasi bir joyda." },
-      { "eyebrow": "Muddatli to'lov", "title": "Orzuingizdagi romlarni nasiyaga xarid qiling", "subtitle": "Moslashuvchan muddatli to'lov bilan hoziroq buyurtma bering — uyingiz qulayligini keyinga qoldirmang." },
       { "eyebrow": "Premium seriya", "title": "Thermo va Engelberg — premium darajadagi romlar", "subtitle": "Issiqlik va shovqin izolyatsiyasida eng yaxshi natija, Markaziy Osiyo iqlimi uchun yaratilgan." }
     ],
-    "installmentTitle": "Muddatli to'lovga rasmiylashtiramiz",
-    "installmentDesc": "Orzuingizdagi oyna va eshiklarni hoziroq oling, to'lovni qulay tarzda bo'lib to'lang. Mutaxassisimiz shartlarni batafsil tushuntiradi.",
-    "installmentCta": "Nasiya shartlari",
     "measureTitle": "Bepul o'lchovga buyurtma bering",
     "measureDesc": "Mutaxassisimiz bepul keladi, aniq o'lchov oladi va optimal yechimni taklif qiladi — hech qanday majburiyatsiz.",
     "measureCta": "Bepul o'lchov olish",
@@ -144,7 +140,6 @@
     "faq": [
       { "q": "O'lchov va konsultatsiya pullikmi?", "a": "Yo'q, o'lchov va konsultatsiya mutlaqo bepul va hech qanday majburiyatsiz. Mutaxassisimiz sizga qulay vaqtda keladi." },
       { "q": "Buyurtma necha kunda tayyor bo'ladi?", "a": "O'lchamga qarab odatda 5–10 ish kuni. Aniq muddat o'lchovdan keyin aytiladi." },
-      { "q": "Muddatli to'lov (nasiya) bormi?", "a": "Ha, moslashuvchan muddatli to'lov imkoniyati mavjud. Shartlarni menejerimiz batafsil tushuntiradi." },
       { "q": "Kafolat qancha muddatga beriladi?", "a": "Mahsulotlarga 5 yilgacha rasmiy kafolat beriladi. Furnitura va o'rnatish ham kafolatlanadi." },
       { "q": "O'rnatishni o'zingiz qilasizmi?", "a": "Ha, kalit topshirish tamoyilida — o'lchovdan tortib professional montajgacha hammasini malakali brigadamiz bajaradi." }
     ]
